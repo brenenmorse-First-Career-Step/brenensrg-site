@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Locotos — Latin American Grill</title>
+<meta name="description" content="Locotos — a bold Latin American grill inspired by the Andes. Build-your-own bowls, plates and tacos. Authentic Latin, made fresh daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,500&family=Oswald:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B0C18;--red:#993430;--teal:#87A995;--gold:#B17126;--peak:#C38D31;--cream:#FBE9AB;--paper:#FBF7EE}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--navy);background:var(--paper);line-height:1.7}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.parentbar{background:var(--navy);color:#cdc7b8;text-align:center;padding:7px;font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.parentbar a{color:var(--peak)}.parentbar a:hover{color:var(--cream)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,12,24,.96);backdrop-filter:blur(8px)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:12px 6vw;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:10px}.nav-brand img{width:42px}
+.nav-brand .wm{font-family:'Playfair Display',serif;font-weight:900;font-size:1.35rem;color:var(--cream);letter-spacing:1px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;color:var(--cream);opacity:.85}
+.nav-links a:hover{opacity:1;color:var(--peak)}
+.nav-cta{border:1.5px solid var(--gold);padding:8px 18px;border-radius:2px}
+.nav-cta:hover{background:var(--gold);color:var(--navy)!important;opacity:1}
+.nav-toggle{display:none;background:none;border:none;color:var(--cream);font-size:1.5rem;cursor:pointer}
+.hero{position:relative;min-height:88vh;background:var(--navy);display:flex;align-items:center;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;width:100%;align-items:center;min-height:88vh}
+.hero-copy{padding:8vh 4vw 8vh 6vw;z-index:2}
+.hero-mtn{width:130px;margin-bottom:20px}
+.hero h1{font-weight:900;font-size:clamp(3rem,6.5vw,5.6rem);line-height:.92;color:var(--cream)}
+.hero .grill{font-family:'Oswald',sans-serif;letter-spacing:.5em;text-transform:uppercase;color:var(--peak);margin:14px 0 0 4px;font-size:clamp(.8rem,1.4vw,1.1rem)}
+.hero .lead{color:#cdc7b8;font-size:1.12rem;max-width:30ch;margin:24px 0 30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;padding:14px 30px;border-radius:2px;cursor:pointer;border:1.5px solid transparent;transition:transform .15s;display:inline-block}
+.btn:hover{transform:translateY(-2px)}.btn-gold{background:var(--gold);color:var(--navy)}.btn-gold:hover{background:var(--peak)}
+.btn-ghost{border-color:var(--cream);color:var(--cream)}.btn-ghost:hover{background:var(--cream);color:var(--navy)}
+.hero-photo{position:relative;height:88vh}.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,transparent 22%)}
+.section{padding:6rem 6vw}.section-head{text-align:center;max-width:760px;margin:0 auto 3rem}
+.eyebrow{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;color:var(--red)}
+.section-head h2{font-weight:900;font-size:clamp(2rem,4vw,3rem);margin:.5rem 0;color:var(--navy)}
+.rule{width:80px;height:3px;background:linear-gradient(90deg,var(--red),var(--gold),var(--teal));margin:1rem auto 0;border-radius:2px}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:1000px;margin:0 auto}
+.pcard{display:flex;gap:20px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.06);border-top:4px solid var(--red);padding:18px;align-items:center;transition:transform .2s}
+.pcard:hover{transform:translateY(-4px)}.pcard-img{width:120px;height:120px;border-radius:10px;overflow:hidden;flex-shrink:0;background:var(--cream)}
+.pcard-img img{width:100%;height:100%;object-fit:cover}.pcard h3{font-size:1.4rem;color:var(--red);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pcard p{color:#6b6354;font-size:.95rem;margin-top:4px}
+.tag{font-family:'Oswald',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;background:var(--teal);color:var(--navy);padding:3px 8px;border-radius:20px;font-weight:600}
+.build{background:var(--navy);color:var(--cream)}.build .section-head h2{color:var(--cream)}.build .eyebrow{color:var(--peak)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1040px;margin:0 auto}
+.step{background:rgba(251,233,171,.04);border:1px solid rgba(251,233,171,.14);border-radius:14px;padding:24px}
+.step-n{font-family:'Playfair Display',serif;font-weight:900;font-size:2rem;color:var(--peak)}
+.step h3{font-size:1.1rem;margin:4px 0 12px;color:var(--cream)}
+.chip{display:inline-block;font-family:'Oswald',sans-serif;font-size:.72rem;color:#e6dfcd;background:rgba(251,233,171,.08);border:1px solid rgba(251,233,171,.16);padding:4px 10px;border-radius:20px;margin:0 5px 7px 0}
+.cta{background:var(--red);color:var(--cream);text-align:center;padding:5rem 6vw}.cta h2{font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--cream)}
+.cta p{max-width:540px;margin:1rem auto 1.8rem;color:#f3e6d8}.btn-cream{background:var(--cream);color:var(--navy)}
+.foot{background:var(--navy);color:#cdc7b8;text-align:center;padding:4rem 6vw 2rem}.foot-mtn{width:200px;margin:0 auto 16px}
+.foot-meta{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:1.4rem 0;font-family:'Oswald',sans-serif;font-size:.82rem;letter-spacing:.06em}
+.foot-meta a:hover{color:var(--peak)}.foot-base{border-top:1px solid rgba(251,233,171,.12);padding-top:1.4rem;font-size:.74rem;color:#7c756a;font-family:'Oswald',sans-serif;letter-spacing:.06em}
+@media (max-width:860px){.nav-links{position:fixed;inset:0 0 0 auto;width:74vw;background:var(--navy);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:.3s;z-index:60}.nav-links.open{transform:translateX(0)}.nav-toggle{display:block;z-index:61}.hero-grid{grid-template-columns:1fr}.hero-photo{display:none}.hero-copy{padding:16vh 8vw 12vh}.pgrid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="parentbar">← <a href="../index.html">Brenen's Restaurant Group</a> · A Campus Dining Concept</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><img src="logo_mtn.png" alt=""><span class="wm">LOCOTOS</span></a>
+    <div class="nav-links" id="navlinks">
+      <a href="#menu">Menu</a>
+      <a href="#build">Build Your Own</a>
+      <a href="#catering">Catering</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="nav-cta">Order</a>
+    </div>
+    <button class="nav-toggle" id="navtoggle" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="hero-mtn"><img src="logo_stack.png" alt="Locotos"></div>
+      <h1>Bold flavor<br>from the Andes.</h1>
+      <div class="grill">Latin American Grill</div>
+      <p class="lead">Build-your-own bowls, plates and tacos — slow-roasted proteins, fresh-chopped salsas, and house sauces with real heat.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-gold">See the Menu</a>
+        <a href="#build" class="btn btn-ghost">Build a Bowl</a>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="hero.jpg" alt="A loaded Locotos bowl"></div>
+  </div>
+</header>
+
+<section class="section" id="menu">
+  <div class="section-head"><p class="eyebrow">The Proteins</p><h2>Start with the good stuff</h2><div class="rule"></div></div>
+  <div class="pgrid">
+    <article class="pcard"><div class="pcard-img"><img src="carnitas.jpg" alt="Carnitas"></div><div><h3>Carnitas</h3><p>Pork shoulder, herb-and-garlic rubbed, apple-infused, slow-roasted 12 hours.</p></div></article>
+    <article class="pcard"><div class="pcard-img"><img src="barbacoa.jpg" alt="Barbacoa"></div><div><h3>Barbacoa</h3><p>Seared, shredded beef with roasted onion, garlic, spices &amp; chiles.</p></div></article>
+    <article class="pcard"><div class="pcard-img"><img src="chicken.jpg" alt="Grilled Chicken"></div><div><h3>Grilled Chicken</h3><p>Chicken marinated in chipotle adobo, finished on the grill.</p></div></article>
+    <article class="pcard"><div class="pcard-img"><img src="portobello.jpg" alt="Portobello"></div><div><h3>Grilled Portobello <span class="tag">Vegan</span></h3><p>Portobello in a cumin-paprika mojo marinade, grilled.</p></div></article>
+  </div>
+</section>
+
+<section class="section build" id="build">
+  <div class="section-head"><p class="eyebrow">Build Your Own</p><h2>Your bowl, your rules</h2></div>
+  <div class="steps">
+    <div class="step"><div class="step-n">01</div><h3>Pick a format</h3><span class="chip">Arepa Bowl</span><span class="chip">Quesadilla</span><span class="chip">3 Tacos</span><span class="chip">Platter</span></div>
+    <div class="step"><div class="step-n">02</div><h3>Choose a base</h3><span class="chip">White Rice</span><span class="chip">Brown Rice</span><span class="chip">Black Beans</span><span class="chip">Romaine</span></div>
+    <div class="step"><div class="step-n">03</div><h3>Pile on toppings</h3><span class="chip">Pico</span><span class="chip">Corn Salsa</span><span class="chip">Maduros</span><span class="chip">Slaw</span><span class="chip">Guac +</span></div>
+    <div class="step"><div class="step-n">04</div><h3>Finish with sauce</h3><span class="chip">Cilantro Aioli</span><span class="chip">Chimichurri</span><span class="chip">Aji Amarillo</span><span class="chip">Habanero</span></div>
+  </div>
+</section>
+
+<section class="cta" id="catering">
+  <h2>Catering that builds itself</h2>
+  <p>A self-serve Latin spread that lets every guest build their own. On-time delivery and setup, vegan options, fresh daily.</p>
+  <a href="mailto:hello@eatlocotos.com?subject=Locotos%20Catering" class="btn btn-cream">Request Catering</a>
+</section>
+
+<footer class="foot" id="visit">
+  <div class="foot-mtn"><img src="logo_stack.png" alt="Locotos"></div>
+  <div class="foot-meta">
+    <a href="https://eatlocotos.com">eatlocotos.com</a>
+    <a href="mailto:hello@eatlocotos.com">hello@eatlocotos.com</a>
+    <a href="../index.html">A Brenen's Restaurant Group concept</a>
+  </div>
+  <div class="foot-base">© 2026 Locotos · Latin American Grill</div>
+</footer>
+
+<script>
+const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');
+t.addEventListener('click',()=>l.classList.toggle('open'));
+l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));
+</script>
+</body>
+</html>

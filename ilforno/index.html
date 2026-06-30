@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il Forno Kitchen — Wood-Fired Italian</title>
+<meta name="description" content="Il Forno Kitchen — signature pastas, wood-fired artisan pizzas, and fresh-chopped salads. Made fresh daily, vegan and gluten-free options.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital@0;1&family=Montserrat:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--rd:#ED1D25;--ch:#1A1715;--cr:#F4F0E6;--pl:#E7E2D6;--gr:#5C7A4A;--ink:#221F1B}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Lora',serif;color:var(--ink);background:var(--cr);line-height:1.7}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase}
+.parentbar{background:var(--ch);color:#bdb6a8;text-align:center;padding:7px;font-family:'Montserrat',sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.parentbar a{color:var(--rd)}.parentbar a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,21,.97);backdrop-filter:blur(8px)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:10px 6vw;display:flex;align-items:center;justify-content:space-between}
+.nav-brand img{height:46px}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;color:var(--cr);opacity:.85}
+.nav-links a:hover{opacity:1;color:var(--rd)}
+.nav-cta{border:1.5px solid var(--rd);padding:8px 18px}.nav-cta:hover{background:var(--rd);color:#fff!important;opacity:1}
+.nav-toggle{display:none;background:none;border:none;color:var(--cr);font-size:1.5rem;cursor:pointer}
+.hero{background:var(--ch);color:var(--cr);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:80vh}
+.hero-copy{padding:7vh 4vw 7vh 7vw;z-index:2}
+.hero-logo{width:230px;margin-bottom:24px;background:var(--cr);padding:22px 26px;border-radius:10px;display:inline-block}
+.hero-logo img{width:100%}
+.hero h1{font-size:clamp(2.6rem,5.5vw,4.6rem);line-height:.95;color:var(--cr)}
+.hero h1 .rd{color:var(--rd)}
+.script{font-family:'Caveat',cursive;font-weight:700;font-size:clamp(2rem,4vw,3rem);color:var(--cr);display:block;margin-top:4px;text-transform:none}
+.hero .lead{font-size:1.12rem;color:#d8d2c4;max-width:34ch;margin:22px 0 30px}
+.btn{font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;padding:14px 30px;border-radius:2px;cursor:pointer;border:1.5px solid transparent;display:inline-block;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn-rd{background:var(--rd);color:#fff}.btn-ghost{border-color:var(--cr);color:var(--cr)}.btn-ghost:hover{background:var(--cr);color:var(--ch)}
+.hero-photo{position:relative;align-self:stretch;min-height:80vh}.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ch),transparent 30%)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.stats{background:var(--rd);color:#fff;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:28px 22px;text-align:center;border-right:1px solid rgba(255,255,255,.18)}.stat:last-child{border-right:none}
+.stat .n{font-family:'Oswald',sans-serif;font-weight:700;font-size:2.1rem}.stat .l{font-family:'Montserrat',sans-serif;font-size:.74rem;opacity:.92;margin-top:2px}
+.section{padding:5.5rem 7vw}.section.cream{background:var(--cr)}.section.char{background:var(--ch);color:var(--cr)}
+.head{text-align:center;max-width:760px;margin:0 auto 3rem}
+.kick{font-family:'Caveat',cursive;font-weight:700;font-size:1.6rem;color:var(--rd)}
+.head h2{font-size:clamp(2rem,4vw,3rem);color:var(--ch);margin:.1rem 0}.char .head h2{color:var(--cr)}
+.head .price{font-family:'Oswald',sans-serif;font-weight:600;color:var(--rd);font-size:1.05rem;margin-top:6px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:6px 50px;max-width:1040px;margin:0 auto}
+.item{border-bottom:1px solid rgba(26,23,21,.12);padding:14px 0}.char .item{border-color:rgba(244,240,230,.14)}
+.item-h{display:flex;align-items:center;gap:9px}.item-h h4{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.12rem}
+.item p{font-size:.9rem;color:#6b6358;margin-top:3px}.char .item p{color:#bdb6a8}
+.tag{font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:2px 7px;border-radius:20px}
+.tag.veg{background:var(--gr);color:#fff}.tag.spicy{background:var(--rd);color:#fff}
+.feature{background:var(--cr);display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.feature-img{position:relative;min-height:400px}.feature-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feature-copy{padding:5rem 6vw;align-self:center}.feature-copy h2{font-size:2.2rem;color:var(--ch);margin:.1rem 0 1rem}
+.feature-copy p{color:#5a5249;font-size:1.05rem;margin-bottom:1rem}
+.bar-price{font-family:'Oswald',sans-serif;font-weight:700;font-size:2.4rem;color:var(--rd)}.bar-price small{font-family:'Montserrat',sans-serif;font-weight:500;font-size:.8rem;color:#6b6358;letter-spacing:.06em;text-transform:uppercase;display:block}
+.cta{background:var(--rd);color:#fff;text-align:center;padding:5rem 6vw}.cta .kick{color:#fff}.cta h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}.cta p{max-width:560px;margin:1rem auto 1.8rem;opacity:.94}
+.btn-cr{background:var(--cr);color:var(--ch)}
+.foot{background:var(--ch);color:#bdb6a8;text-align:center;padding:4rem 6vw 2rem}.foot-logo{width:200px;margin:0 auto 16px;background:var(--cr);padding:16px 20px;border-radius:8px;display:inline-block}
+.foot-meta{font-family:'Montserrat',sans-serif;font-size:.82rem;display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:14px}.foot-meta a:hover{color:var(--rd)}
+.foot-base{border-top:1px solid rgba(244,240,230,.12);margin-top:1.6rem;padding-top:1.4rem;font-size:.74rem;color:#7c756a;font-family:'Montserrat',sans-serif}
+@media (max-width:860px){.nav-links{position:fixed;inset:0 0 0 auto;width:74vw;background:var(--ch);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.3s;z-index:60}.nav-links.open{transform:translateX(0)}.nav-toggle{display:block;z-index:61}.hero-grid{grid-template-columns:1fr}.hero-photo{display:none}.hero-copy{padding:11vh 8vw 9vh}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.menu{grid-template-columns:1fr;gap:0}.feature{grid-template-columns:1fr}.feature-img{min-height:280px}}
+@media (max-width:520px){.stats{grid-template-columns:1fr}.stat{border-right:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="parentbar">← <a href="../index.html">Brenen's Restaurant Group</a> · A Campus Dining Concept</div>
+<nav class="nav"><div class="nav-inner">
+<a href="index.html" class="nav-brand"><img src="lockup.png" alt="Il Forno" style="background:var(--cr);padding:6px 10px;border-radius:6px"></a>
+<div class="nav-links" id="navlinks"><a href="#pasta">Pasta</a><a href="#pizza">Pizza</a><a href="#catering">Catering</a><a href="#visit">Visit</a><a href="#visit" class="nav-cta">Order</a></div>
+<button class="nav-toggle" id="navtoggle">&#9776;</button></div></nav>
+
+<header class="hero"><div class="hero-grid">
+<div class="hero-copy">
+<div class="hero-logo"><img src="lockup.png" alt="Il Forno Italian Kitchen"></div>
+<h1>Wood-fired.<br><span class="rd">Made fresh daily.</span><span class="script">Pasta · Pizza · Salads</span></h1>
+<p class="lead">Signature chef-inspired pastas, artisan pizzas from a rustic wood-burning oven, and fresh-chopped salads. Vegan and gluten-free options, made to order.</p>
+<div class="hero-actions"><a href="#pasta" class="btn btn-rd">See the Menu</a><a href="#catering" class="btn btn-ghost">Catering</a></div>
+</div>
+<div class="hero-photo"><img src="hero.jpg" alt="Il Forno pesto penne"></div>
+</div></header>
+
+<div class="stats">
+<div class="stat"><div class="n">$6.75</div><div class="l">Chef-inspired pastas from</div></div>
+<div class="stat"><div class="n">12+</div><div class="l">Wood-fired pizzas</div></div>
+<div class="stat"><div class="n">V·GF</div><div class="l">Vegan &amp; gluten-free options</div></div>
+<div class="stat"><div class="n">Fresh</div><div class="l">Made daily, delivered hot</div></div>
+</div>
+
+<section class="section cream" id="pasta">
+<div class="head"><p class="kick">Chef-Inspired</p><h2>Signature Pastas</h2><div class="price">Small $6.75 · Regular $8.75 · with a garlic breadstick</div></div>
+<div class="menu">
+<div class="item"><div class="item-h"><h4>Chicken Alfredo</h4></div><p>Grilled chicken · parmesan alfredo · spinach · fettuccine · mushrooms · romano</p></div>
+<div class="item"><div class="item-h"><h4>Meatballs &amp; Spaghetti</h4></div><p>Two large meatballs · pomodoro · spaghetti · romano</p></div>
+<div class="item"><div class="item-h"><h4>Garden Pesto</h4> <span class="tag veg">Veg</span></div><p>Basil pesto · fettuccine · portobello · tomatoes · spinach · roasted red peppers · basil · romano</p></div>
+<div class="item"><div class="item-h"><h4>Chicken Basil Pesto</h4></div><p>Grilled chicken · basil pesto · casarecce · tomatoes · roasted red peppers · romano</p></div>
+<div class="item"><div class="item-h"><h4>Parma Rosa</h4></div><p>Grilled chicken · parma rosa · fettuccine · onions · peppers · spinach · romano</p></div>
+<div class="item"><div class="item-h"><h4>Spicy Il Forno</h4> <span class="tag spicy">Spicy</span></div><p>Fennel sausage · spicy arrabbiata · rigatoni · green onions · tomatoes · romano</p></div>
+</div></section>
+
+<section class="feature">
+<div class="feature-img"><img src="penne.jpg" alt="Pesto rigatoni"></div>
+<div class="feature-copy"><p class="kick">The Signature Pasta Bar</p><h2>Build a bar, feed a crowd</h2>
+<p>For catering, the Signature Pasta Bar lets every guest build their own — pick two (or three for big groups) from the full pasta lineup, served with garlic breadsticks.</p>
+<div class="bar-price">$10<small>per person · catering</small></div></div>
+</section>
+
+<section class="section char" id="pizza">
+<div class="head"><p class="kick" style="color:var(--rd)">Baked in the Wood Oven</p><h2>Wood-Fired Artisan Pizzas</h2><p style="font-family:'Lora',serif;color:#d8d2c4;text-transform:none">Neapolitan, East Coast, and infused olive-oil styles — blistered in a rustic wood-burning oven.</p></div>
+<div class="menu">
+<div class="item"><div class="item-h"><h4>Margherita</h4></div><p>Fior di latte · San Marzano tomatoes · romano · fresh basil · olive oil</p></div>
+<div class="item"><div class="item-h"><h4>PJ's New Yorker</h4></div><p>Pepperoni · sausage · mushrooms · red onions · green peppers</p></div>
+<div class="item"><div class="item-h"><h4>Rustic</h4></div><p>Pepperoni · sausage · caramelized onions · roasted red peppers · basil</p></div>
+<div class="item"><div class="item-h"><h4>Quattro</h4></div><p>Sausage · meatballs · pepperoni · bacon</p></div>
+<div class="item"><div class="item-h"><h4>Bruschetta</h4></div><p>Basil pesto · fior di latte · bruschetta tomatoes · ricotta · arugula · balsamic</p></div>
+<div class="item"><div class="item-h"><h4>Kyle's BBQ</h4></div><p>Chicken · bacon · BBQ sauce · onion strings</p></div>
+<div class="item"><div class="item-h"><h4>Skadoosh</h4> <span class="tag spicy">Spicy</span></div><p>Chicken · bacon · honey sriracha · red onions · jalapeños · cilantro</p></div>
+<div class="item"><div class="item-h"><h4>Buffalo</h4></div><p>Chicken · mild buffalo · ranch · cheddar</p></div>
+</div></section>
+
+<section class="cta" id="catering">
+<p class="kick">Pasta · Pizzas · Salads · Delivery</p>
+<h2>Catering for your next event</h2>
+<p>Signature pasta bar, wood-fired pizzas and fresh salads. On-time delivery and setup, vegan and gluten-free options. $100 minimum.</p>
+<a href="mailto:catering@ilfornokitchen.com?subject=Il%20Forno%20Catering" class="btn btn-cr">Request Catering</a>
+</section>
+
+<footer class="foot" id="visit">
+<div class="foot-logo"><img src="lockup.png" alt="Il Forno"></div>
+<div class="foot-meta"><a href="https://ilfornokitchen.com">ilfornokitchen.com</a><a href="mailto:catering@ilfornokitchen.com">catering@ilfornokitchen.com</a><a href="tel:919-616-5334">919.616.5334</a><a href="../index.html">A Brenen's Restaurant Group concept</a></div>
+<div class="foot-base">© 2026 Il Forno Kitchen · Italian Kitchen</div>
+</footer>
+<script>const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');t.addEventListener('click',()=>l.classList.toggle('open'));l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));</script>
+</body></html>

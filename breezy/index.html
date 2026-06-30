@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breezy Bev Co — Coastal Refreshers</title>
+<meta name="description" content="Breezy Bev Co — a coastal refresher company with a Nantucket soul. Cold brew, coolers, tide tea lattes, soft serve and shakes. Skip the line. Live breezy.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Lora:ital@0;1&family=Montserrat:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--nv:#1D2A44;--sk:#4A7BA6;--sf:#9FC1C9;--sd:#EDE6D6;--wh:#FBFBF8;--ink:#1A2236}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Lora',serif;color:var(--ink);background:var(--wh);line-height:1.7}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:900}
+.parentbar{background:var(--nv);color:#cdd6e3;text-align:center;padding:7px;font-family:'Montserrat',sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.parentbar a{color:var(--sf)}.parentbar a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:50;background:rgba(29,42,68,.96);backdrop-filter:blur(8px)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:12px 6vw;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:10px}.nav-brand img{width:44px;border-radius:50%}
+.nav-brand .wm{font-family:'Fraunces',serif;font-weight:900;font-size:1.25rem;color:var(--wh);letter-spacing:.5px}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;color:var(--wh);opacity:.85}
+.nav-links a:hover{opacity:1;color:var(--sf)}
+.nav-cta{border:1.5px solid var(--sf);padding:8px 18px;border-radius:30px}.nav-cta:hover{background:var(--sf);color:var(--nv)!important;opacity:1}
+.nav-toggle{display:none;background:none;border:none;color:var(--wh);font-size:1.5rem;cursor:pointer}
+.hero{background:linear-gradient(170deg,var(--nv) 0%,#243557 55%,var(--sk) 150%);color:var(--wh);text-align:center;padding:6rem 6vw 5rem;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;background:repeating-linear-gradient(90deg,transparent 0 30px,rgba(159,193,201,.1) 30px 60px)}
+.hero-gull{width:160px;margin:0 auto 22px;position:relative;z-index:2}.hero-gull img{border-radius:50%}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:.98;color:var(--wh);position:relative;z-index:2}
+.script{font-family:'Caveat',cursive;font-size:clamp(2rem,4vw,3rem);color:var(--sf);display:block;margin-top:6px}
+.hero .lead{font-size:1.14rem;color:#d4ddea;max-width:50ch;margin:22px auto 0;position:relative;z-index:2}
+.tagline{font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:.74rem;color:var(--sf);margin-top:24px;position:relative;z-index:2}
+.btn{font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;padding:14px 32px;border-radius:30px;cursor:pointer;border:1.5px solid transparent;display:inline-block;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn-w{background:var(--wh);color:var(--nv)}
+.section{padding:5.5rem 7vw}.sand{background:var(--sd)}.navy{background:var(--nv);color:var(--wh)}
+.head{text-align:center;max-width:720px;margin:0 auto 3rem}
+.eyebrow{font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:.7rem;color:var(--sk)}
+.head h2{font-size:clamp(1.9rem,3.8vw,2.8rem);margin:.3rem 0;color:var(--nv)}
+.navy .head h2{color:#fff}.navy .eyebrow{color:var(--sf)}
+.menu{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+.fam{background:var(--wh);border-radius:16px;overflow:hidden;box-shadow:0 6px 22px rgba(29,42,68,.08)}
+.fam-head{color:#fff;padding:18px 28px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.fam-head h3{font-size:1.5rem}.fam-head span{font-family:'Montserrat',sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:.68rem;opacity:.85}
+.fam-items{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;padding:14px 28px 22px}
+.item{border-bottom:1px solid rgba(29,42,68,.1);padding:12px 0}
+.item h4{font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;color:var(--nv)}
+.item p{font-size:.88rem;color:#5b6678;margin-top:2px}
+.byo{text-align:center;font-family:'Montserrat',sans-serif;font-size:.78rem;letter-spacing:.06em;color:var(--sk);margin-top:2.4rem}.byo strong{color:var(--nv)}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1040px;margin:0 auto}
+.whyc{background:rgba(159,193,201,.08);border:1px solid rgba(159,193,201,.22);border-radius:14px;padding:28px;text-align:center}
+.whyc .ic{font-family:'Fraunces',serif;font-weight:900;font-size:2rem;color:var(--sf)}
+.whyc h4{font-family:'Fraunces',serif;font-weight:700;font-size:1.2rem;color:#fff;margin:6px 0 8px}.whyc p{color:#cdd6e3;font-size:.94rem}
+.cta{background:linear-gradient(160deg,var(--sk),var(--nv));color:var(--wh);text-align:center;padding:5rem 6vw}
+.cta h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}.cta .script{font-size:2.4rem}.cta p{max-width:560px;margin:1rem auto 1.8rem;color:#e4ebf3}
+.foot{background:var(--nv);color:#cdd6e3;text-align:center;padding:4rem 6vw 2rem}.foot-gull{width:92px;margin:0 auto 16px}.foot-gull img{border-radius:50%}
+.foot-meta{font-family:'Montserrat',sans-serif;font-size:.82rem;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:8px}.foot-meta a:hover{color:var(--sf)}
+.foot-base{border-top:1px solid rgba(159,193,201,.14);margin-top:1.6rem;padding-top:1.4rem;font-size:.74rem;color:#7c8699;font-family:'Montserrat',sans-serif}
+@media (max-width:860px){.nav-links{position:fixed;inset:0 0 0 auto;width:74vw;background:var(--nv);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.3s;z-index:60}.nav-links.open{transform:translateX(0)}.nav-toggle{display:block;z-index:61}.fam-items{grid-template-columns:1fr}.why{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="parentbar">← <a href="../index.html">Brenen's Restaurant Group</a> · A Campus Dining Concept</div>
+<nav class="nav"><div class="nav-inner">
+<a href="index.html" class="nav-brand"><img src="gull.png" alt=""><span class="wm">Breezy Bev Co</span></a>
+<div class="nav-links" id="navlinks"><a href="#menu">Menu</a><a href="#why">Why Breezy</a><a href="#visit">Visit</a><a href="#visit" class="nav-cta">Order</a></div>
+<button class="nav-toggle" id="navtoggle">&#9776;</button></div></nav>
+
+<header class="hero">
+<div class="hero-gull"><img src="gull.png" alt="Breezy Bev Co"></div>
+<h1>Order. Grab. Go.<span class="script">Skip the line. Live breezy.</span></h1>
+<p class="lead">A coastal refresher company with a Nantucket soul — functional cold brews, fruit-forward coolers, tide tea lattes, swell soft serve and protein shakes. Order ahead, grab from the pickup wall, and go.</p>
+<div class="tagline">Costeca Campus · Pickup Wall</div>
+</header>
+
+<section class="section sand" id="menu">
+<div class="head"><p class="eyebrow">The Menu</p><h2>Five ways to live breezy</h2></div>
+<div class="menu">
+<div class="fam"><div class="fam-head" style="background:#1D2A44"><h3>Coastal Cold Brew</h3><span>Functional Mushroom Cold Brew</span></div><div class="fam-items">
+<div class="item"><h4>Saltwater Caramel</h4><p>Mushroom cold brew · caramel · sea salt · caramel ribbon · milk</p></div>
+<div class="item"><h4>Vanilla Tide</h4><p>Mushroom cold brew · vanilla · milk · sweet cream</p></div>
+<div class="item"><h4>Coconut Breaker</h4><p>Mushroom cold brew · coconut · vanilla · milk · sweet cream</p></div>
+<div class="item"><h4>Mocha Drift</h4><p>Mushroom cold brew · chocolate · chocolate ribbon · milk · sweet cream</p></div></div></div>
+<div class="fam"><div class="fam-head" style="background:#4A7BA6"><h3>Breezy Coolers</h3><span>Refreshing, fruit-forward</span></div><div class="fam-items">
+<div class="item"><h4>Ocean Mist</h4><p>Lemonade · blueberry · coconut · butterfly pea float · blueberries</p></div>
+<div class="item"><h4>Island Breeze</h4><p>Green tea · mango · peach · coconut · basil · strawberry</p></div>
+<div class="item"><h4>Pink Sand</h4><p>Lemonade · strawberry · fresh strawberries · basil</p></div>
+<div class="item"><h4>Sailor's Sky</h4><p>Lemonade · watermelon cooler · mint · butterfly pea float</p></div>
+<div class="item"><h4>Ginger Shore</h4><p>Green tea · lemonade · ginger · mint · fresh lemon</p></div>
+<div class="item"><h4>Coastal Chill</h4><p>Lemonade · ginger · watermelon cooler · mint · strawberry</p></div></div></div>
+<div class="fam"><div class="fam-head" style="background:#5C8A6E"><h3>Tide Tea Lattes</h3><span>Chai &amp; Matcha</span></div><div class="fam-items">
+<div class="item"><h4>Matcha Drift</h4><p>Matcha · vanilla · mint · strawberries · strawberry swirl · milk</p></div>
+<div class="item"><h4>Blueberry Matcha Rise</h4><p>Matcha · blueberry · mint · fresh blueberries · milk</p></div>
+<div class="item"><h4>Harbor Chai</h4><p>Spiced chai · vanilla · milk of choice</p></div>
+<div class="item"><h4>Salty Captain Chai</h4><p>Spiced chai · strawberry · vanilla · fresh strawberries · milk</p></div></div></div>
+<div class="fam"><div class="fam-head" style="background:#C9A15A"><h3>Swell Soft Serve</h3><span>Layered Dessert Cups</span></div><div class="fam-items">
+<div class="item"><h4>Beach Day Berry Swirl</h4><p>Soft serve · strawberry · blueberry · berries · shortcake crumble</p></div>
+<div class="item"><h4>Salted Caramel Wave</h4><p>Soft serve · caramel ribbon · vanilla cookie crumble</p></div>
+<div class="item"><h4>Tropical Drift</h4><p>Soft serve · mango · peach · coconut · fresh strawberry</p></div>
+<div class="item"><h4>Cocoa Coast Swell</h4><p>Soft serve · chocolate ribbon · chocolate cookie crumble</p></div></div></div>
+<div class="fam"><div class="fam-head" style="background:#9C5A4A"><h3>Shoreline Shakes</h3><span>High-Protein Blends</span></div><div class="fam-items">
+<div class="item"><h4>Double Tide Chocolate</h4><p>Double chocolate protein · chocolate ribbon swirl</p></div>
+<div class="item"><h4>Vanilla Shore Shake</h4><p>Double vanilla protein · vanilla</p></div>
+<div class="item"><h4>SB &amp; Strawberry Swell</h4><p>Sunbutter · strawberry-vanilla protein · strawberry</p></div>
+<div class="item"><h4>Chocolate SB Breaker</h4><p>Chocolate-SB protein · vanilla protein · chocolate ribbon</p></div></div></div>
+</div>
+<p class="byo">Every line offers a <strong>Build-Your-Own</strong> — your coast, your brew, your cooler, your swell.</p>
+</section>
+
+<section class="section navy" id="why">
+<div class="head"><p class="eyebrow">Why It Works On Campus</p><h2>Built for the grab-and-go generation</h2></div>
+<div class="why">
+<div class="whyc"><div class="ic">01</div><h4>Skip the line</h4><p>Order on your phone, grab from a numbered cubby on the pickup wall. No register, no wait between classes.</p></div>
+<div class="whyc"><div class="ic">02</div><h4>Crave-forward menu</h4><p>Functional cold brew, fruit coolers, matcha, soft serve and protein shakes — a drink for every mood and macro.</p></div>
+<div class="whyc"><div class="ic">03</div><h4>Instagram-ready</h4><p>A coastal Nantucket aesthetic — whitewashed shiplap, the captain gull, butterfly-pea color floats. Built to be shared.</p></div>
+</div></section>
+
+<section class="cta">
+<h2>Bring Breezy to your campus<span class="script">Skip the line. Live breezy.</span></h2>
+<p>Pickup-wall design, full menu with costed recipes, and the operating model are ready to share.</p>
+<a href="mailto:hello@brenensrg.com?subject=Breezy%20Bev%20Co" class="btn btn-w">Request the Deck</a>
+</section>
+
+<footer class="foot" id="visit">
+<div class="foot-gull"><img src="gull.png" alt="Breezy Bev Co"></div>
+<div class="tagline" style="color:var(--sf)">Skip the line · Live breezy</div>
+<div class="foot-meta"><a href="mailto:hello@brenensrg.com">hello@brenensrg.com</a><a href="../index.html">A Brenen's Restaurant Group concept</a></div>
+<div class="foot-base">© 2026 Breezy Bev Co · Coastal Refreshers</div>
+</footer>
+<script>const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');t.addEventListener('click',()=>l.classList.toggle('open'));l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));</script>
+</body></html>
