@@ -75,29 +75,6 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;line-height:1.02}
 .c-coldbrew{background:#F3E7D6}.c-coolers{background:#FBE3E0}.c-tea{background:#E6F0E2}
 .c-soft{background:#ECE6F4}.c-protein{background:#FbE6F0}
 
-/* ---------- full menu ---------- */
-.menu{background:var(--cream);padding:4.5rem 5vw 5rem;scroll-margin-top:76px}
-.menu-inner{max-width:1080px;margin:0 auto}
-.menu-head{text-align:center;margin-bottom:3rem}
-.menu-head .ey{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:var(--coral);margin-bottom:.4rem}
-.menu-head h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--nv);letter-spacing:-.01em}
-.menu-head .wavemark{font-size:1.5rem;color:var(--sky);margin-top:.4rem}
-.menu-cat{margin-bottom:3.4rem}
-.menu-cat-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid rgba(29,58,110,.14);padding-bottom:.7rem;margin-bottom:1.6rem}
-.menu-cat-head h3{font-family:'Caveat',cursive;font-weight:700;font-size:2.4rem;color:var(--nv);line-height:.9}
-.menu-cat-head .tag{font-family:'Montserrat',sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#5b6678}
-.menu-items{display:grid;grid-template-columns:1fr 1fr;gap:0 3.2rem}
-.menu-item{padding:1rem 0;border-bottom:1px solid rgba(29,58,110,.08)}
-.menu-item-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.menu-item .num{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--coral);font-size:.8rem;margin-right:8px}
-.menu-item h4{display:inline;font-family:'Fraunces',serif;font-weight:900;font-size:1.02rem;color:var(--nv);letter-spacing:.02em;text-transform:uppercase}
-.menu-item .price{font-family:'Fraunces',serif;font-weight:900;font-size:1.02rem;color:var(--nv);white-space:nowrap}
-.menu-item p{font-family:'Lora',serif;font-size:.86rem;color:#5b6678;margin-top:.25rem}
-.menu-byo{grid-column:1 / -1;background:var(--sand);border-radius:14px;padding:1.1rem 1.4rem;margin-top:1rem;border-bottom:none}
-.menu-byo .byo-label{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--nv)}
-.menu-byo h4{text-transform:none}
-.menu-note{text-align:center;font-family:'Lora',serif;font-style:italic;color:#5b6678;font-size:.9rem;margin-top:1.4rem}
-
 /* ---------- spotlight ---------- */
 .spot{background:linear-gradient(180deg,var(--sand) 0%,#f6eede 100%);padding:4.5rem 5vw}
 .spot-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:3rem;align-items:center}
@@ -159,7 +136,6 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;line-height:1.02}
   .steps{grid-template-columns:1fr}
   .spot-notes{justify-content:center}
 }
-@media (max-width:760px){.menu-items{grid-template-columns:1fr;gap:0}}
 @media (max-width:560px){.cats-grid{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto;animation:none!important}}
 </style>
@@ -170,10 +146,10 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;line-height:1.02}
 <nav class="nav"><div class="nav-inner">
   <a href="index.html" class="nav-brand"><img src="gull.png" alt=""><span class="wm">Breezy Bev Co</span></a>
   <div class="nav-links" id="navlinks">
-    <a href="#menu">Menu</a>
-    <a href="#menu">Build Your Own</a>
+    <a href="menu.html">Menu</a>
+    <a href="menu.html#menu">Build Your Own</a>
     <a href="#pickup">Locations</a>
-    <a href="#menu" class="nav-order">Order Now</a>
+    <a href="menu.html" class="nav-order">Order Now</a>
   </div>
   <button class="nav-toggle" id="navtoggle">&#9776;</button>
 </div></nav>
@@ -187,8 +163,8 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;line-height:1.02}
       <h1>FLAVOR<br>VACATION</h1>
       <div class="wavemark">≈≈≈</div>
       <p>Colorful coolers, cold brews, matcha tides, shakes and soft serve — made to keep you breezy all day long.</p>
-      <a href="#menu" class="btn btn-nv">Order Now</a>
-      <br><a href="#menu" class="hero-menu-link">View our menu →</a>
+      <a href="menu.html" class="btn btn-nv">Order Now</a>
+      <br><a href="menu.html" class="hero-menu-link">View our menu →</a>
     </div>
     <div class="hero-cans">
       <img src="cans-hero.png" alt="The Breezy Bev Co lineup — six coastal refreshers">
@@ -204,142 +180,25 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;line-height:1.02}
 <!-- CATEGORIES -->
 <section class="cats">
   <div class="cats-grid">
-    <a class="cat c-coldbrew" href="#menu">
+    <a class="cat c-coldbrew" href="menu.html">
       <div class="canwrap"><img src="can_coldbrew.png" alt="Cold Brew"></div>
       <h3>Cold Brew</h3><p>Smooth. Bold. Always cold.</p></a>
-    <a class="cat c-coolers" href="#menu">
+    <a class="cat c-coolers" href="menu.html">
       <div class="canwrap"><img src="can_strawberry.png" alt="Coolers"></div>
       <h3>Coolers</h3><p>Bright. Fruity. Refreshing.</p></a>
-    <a class="cat c-tea" href="#menu">
+    <a class="cat c-tea" href="menu.html">
       <div class="canwrap"><img src="can_matcha.png" alt="Tea Lattes"></div>
       <h3>Tea Lattes</h3><p>Calm. Creamy. Balanced.</p></a>
-    <a class="cat c-soft" href="#menu">
+    <a class="cat c-soft" href="menu.html">
       <div class="canwrap"><img src="can_taro.png" alt="Soft Serve"></div>
       <h3>Soft Serve</h3><p>Creamy swirls of happiness.</p></a>
-    <a class="cat c-protein" href="#menu">
+    <a class="cat c-protein" href="menu.html">
       <div class="canwrap"><img src="can_blue.png" alt="Protein Shakes"></div>
       <h3>Protein Shakes</h3><p>Fuel your day the breezy way.</p></a>
   </div>
 </section>
 
-<!-- FULL MENU -->
-<section class="menu" id="menu">
-  <div class="menu-inner">
-    <div class="menu-head">
-      <div class="ey">— The Menu —</div>
-      <h2>Order. Grab. Go.</h2>
-      <div class="wavemark">≈≈≈</div>
-    </div>
-
-    <!-- Coastal Cold Brew -->
-    <div class="menu-cat">
-      <div class="menu-cat-head">
-        <h3>Coastal Cold Brew</h3>
-        <span class="tag">Functional Mushroom Cold Brew</span>
-      </div>
-      <div class="menu-items">
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">01</span><h4>Saltwater Caramel</h4></div><span class="price">5.75</span></div>
-          <p>Mushroom cold brew, caramel syrup, sea salt, caramel ribbon, milk of choice.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">02</span><h4>Vanilla Tide</h4></div><span class="price">5.50</span></div>
-          <p>Mushroom cold brew, vanilla, milk of choice, sweet cream.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">03</span><h4>Coconut Breaker</h4></div><span class="price">5.75</span></div>
-          <p>Mushroom cold brew, coconut, vanilla, milk of choice, sweet cream.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">04</span><h4>Mocha Drift</h4></div><span class="price">5.95</span></div>
-          <p>Mushroom cold brew, chocolate sauce, chocolate ribbon, milk of choice, sweet cream.</p></div>
-        <div class="menu-item menu-byo"><div class="byo-label">Build Your Own</div><h4>Your Coast, Your Brew</h4>
-          <p>Mushroom cold brew, choice of milk, vanilla / caramel / coconut / mocha, sweet cream.</p></div>
-      </div>
-    </div>
-
-    <!-- Breezy Coolers -->
-    <div class="menu-cat">
-      <div class="menu-cat-head">
-        <h3>Breezy Coolers</h3>
-        <span class="tag">Refreshing, fruit-forward drinks</span>
-      </div>
-      <div class="menu-items">
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">01</span><h4>Ocean Mist</h4></div><span class="price">5.95</span></div>
-          <p>Lemonade, blueberry purée, coconut purée, butterfly pea float, fresh blueberries.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">02</span><h4>Island Breeze</h4></div><span class="price">5.95</span></div>
-          <p>Green tea, mango purée, peach purée, coconut purée, basil, fresh strawberry.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">03</span><h4>Pink Sand</h4></div><span class="price">5.75</span></div>
-          <p>Lemonade, strawberry purée, fresh strawberries, basil.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">04</span><h4>Sailors Sky</h4></div><span class="price">5.75</span></div>
-          <p>Lemonade, watermelon cooler, mint, butterfly pea float, lemon slice.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">05</span><h4>Ginger Shore</h4></div><span class="price">5.75</span></div>
-          <p>Green tea, lemonade, ginger purée, mint, fresh lemon slice.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">06</span><h4>Green Coast Matcha</h4></div><span class="price">5.95</span></div>
-          <p>Matcha, lemonade, mango purée, mint, lemon slice.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">07</span><h4>Coastal Chill</h4></div><span class="price">5.75</span></div>
-          <p>Lemonade, ginger purée, watermelon cooler, mint, fresh strawberry.</p></div>
-        <div class="menu-item menu-byo"><div class="byo-label">Build Your Own</div><h4>Choose Your Cooler</h4>
-          <p>Green tea or watermelon cooler, lemonade, purées (strawberry, blueberry, mango, peach, ginger, coconut), mint or basil, fresh fruit, butterfly pea.</p></div>
-      </div>
-    </div>
-
-    <!-- Tide Tea Lattes -->
-    <div class="menu-cat">
-      <div class="menu-cat-head">
-        <h3>Tide Tea Lattes</h3>
-        <span class="tag">Chai + Matcha</span>
-      </div>
-      <div class="menu-items">
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">01</span><h4>Matcha Drift</h4></div><span class="price">5.95</span></div>
-          <p>Matcha, vanilla, mint, fresh strawberries, strawberry purée swirl, milk of choice.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">02</span><h4>Blueberry Matcha Rise</h4></div><span class="price">5.95</span></div>
-          <p>Matcha, blueberry purée, mint, fresh blueberries, milk of choice.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">03</span><h4>Harbor Chai</h4></div><span class="price">5.50</span></div>
-          <p>Spiced chai, vanilla, milk of choice.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">04</span><h4>Salty Captain Chai</h4></div><span class="price">5.75</span></div>
-          <p>Spiced chai, strawberry purée, vanilla, fresh strawberries, milk of choice.</p></div>
-        <div class="menu-item menu-byo"><div class="byo-label">Build Your Own</div><h4>Choose Your Tide</h4>
-          <p>Matcha or chai, vanilla / caramel / brown sugar, purées (strawberry, blueberry, mango, peach), mint or basil, fresh fruit, choice of milk.</p></div>
-      </div>
-    </div>
-
-    <!-- Swell Soft Serve -->
-    <div class="menu-cat">
-      <div class="menu-cat-head">
-        <h3>Swell Soft Serve</h3>
-        <span class="tag">Layered Dessert Cups</span>
-      </div>
-      <div class="menu-items">
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">01</span><h4>Beach Day Berry Swirl</h4></div><span class="price">6.25</span></div>
-          <p>Soft serve, strawberry purée, blueberry purée, fresh berries, shortcake crumble.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">02</span><h4>Salted Caramel Wave</h4></div><span class="price">6.25</span></div>
-          <p>Soft serve, caramel ribbon, vanilla cookie crumble.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">03</span><h4>Tropical Drift</h4></div><span class="price">6.25</span></div>
-          <p>Soft serve, mango purée, peach purée, coconut purée, fresh strawberry.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">04</span><h4>Cocoa Coast Swell</h4></div><span class="price">6.25</span></div>
-          <p>Soft serve, chocolate ribbon, chocolate cookie crumble.</p></div>
-        <div class="menu-item menu-byo"><div class="byo-label">Build Your Own</div><h4>Build Your Swell</h4>
-          <p>Soft serve, purées (strawberry, blueberry, mango, peach), caramel or chocolate ribbon, cookie or shortcake crumble, fresh berries.</p></div>
-      </div>
-    </div>
-
-    <!-- Shoreline Shakes -->
-    <div class="menu-cat">
-      <div class="menu-cat-head">
-        <h3>Shoreline Shakes</h3>
-        <span class="tag">High-Protein Blends</span>
-      </div>
-      <div class="menu-items">
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">01</span><h4>Double Tide Chocolate</h4></div><span class="price">6.95</span></div>
-          <p>Double chocolate protein, chocolate ribbon swirl.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">02</span><h4>Vanilla Shore Shake</h4></div><span class="price">6.95</span></div>
-          <p>Double vanilla protein, vanilla.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">03</span><h4>SB &amp; Strawberry Swell</h4></div><span class="price">7.25</span></div>
-          <p>Sunbutter, strawberry-vanilla protein, strawberry purée. Layered.</p></div>
-        <div class="menu-item"><div class="menu-item-top"><div><span class="num">04</span><h4>Chocolate SB Breaker</h4></div><span class="price">7.25</span></div>
-          <p>Chocolate-sunbutter protein, vanilla protein, chocolate ribbon. Layered.</p></div>
-        <div class="menu-item menu-byo"><div class="byo-label">Build Your Own</div><h4>Shape Your Shake</h4>
-          <p>Chocolate or vanilla protein, peanut butter powder, purées (strawberry, blueberry, mango, peach), chocolate or caramel ribbon, layered or blended.</p></div>
-      </div>
-    </div>
-
-    <p class="menu-note">Prices shown are placeholders — update them before you publish.</p>
-  </div>
-</section>
+<!-- SPOTLIGHT -->
 <section class="spot">
   <div class="spot-grid">
     <div class="spot-can"><span class="spot-arch"><img src="can_taro.png" alt="Lavender Breeze"></span></div>
@@ -353,8 +212,8 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;line-height:1.02}
         <div class="spot-note"><div class="dot">●</div>Blueberry Drizzle</div>
       </div>
       <div class="spot-btns">
-        <a href="#menu" class="btn btn-nv">Order Now</a>
-        <a href="#menu" class="btn btn-o">View Menu</a>
+        <a href="menu.html" class="btn btn-nv">Order Now</a>
+        <a href="menu.html" class="btn btn-o">View Menu</a>
       </div>
     </div>
   </div>
@@ -370,7 +229,7 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;line-height:1.02}
       <div class="step"><div class="n">2</div><h4>Choose your flavors</h4><p>Endless purées, drizzles &amp; mix-ins.</p></div>
       <div class="step"><div class="n">3</div><h4>Make it breezy</h4><p>Customize it your way &amp; enjoy.</p></div>
     </div>
-    <a href="#menu" class="btn btn-nv">Build Yours Now</a>
+    <a href="menu.html" class="btn btn-nv">Build Yours Now</a>
   </div>
 </section>
 
@@ -404,11 +263,11 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;line-height:1.02}
       <div class="soc"><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a></div>
     </div>
     <div class="foot-col"><h5>Menu</h5>
-      <a href="#menu">Cold Brew</a><a href="#menu">Coolers</a><a href="#menu">Tea Lattes</a><a href="#menu">Soft Serve</a><a href="#menu">Protein Shakes</a></div>
+      <a href="menu.html">Cold Brew</a><a href="menu.html">Coolers</a><a href="menu.html">Tea Lattes</a><a href="menu.html">Soft Serve</a><a href="menu.html">Protein Shakes</a></div>
     <div class="foot-col"><h5>Company</h5>
       <a href="../index.html">Our Story</a><a href="../contact.html">Careers</a><a href="../contact.html">Catering</a><a href="#">Gift Cards</a></div>
     <div class="foot-col"><h5>Help</h5>
-      <a href="#">FAQs</a><a href="#menu">Nutrition</a><a href="mailto:hello@brenensrg.com">Contact Us</a></div>
+      <a href="#">FAQs</a><a href="menu.html">Nutrition</a><a href="mailto:hello@brenensrg.com">Contact Us</a></div>
   </div>
   <div class="foot-base">
     <span>© 2026 Breezy Bev Co · Coastal Refreshers · A Brenen's Restaurant Group concept</span>
