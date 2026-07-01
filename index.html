@@ -13,6 +13,14 @@
   .nav-brand{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
   .nav-brand .nav-logo{height:52px!important;width:auto!important;max-width:none!important;object-fit:contain;display:block;flex:none}
   @media(max-width:600px){.nav-brand .nav-logo{height:40px!important}}
+  .trusted{background:var(--paper,#faf8f4);border-bottom:1px solid var(--line,#e2ddd2);padding:2.2rem 1.5rem}
+  .trusted-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+  .trusted .lbl{font-family:"Montserrat",sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mute,#9a9184)}
+  .trusted .marks{display:flex;align-items:center;gap:2.8rem;flex-wrap:wrap;justify-content:center}
+  .trusted .marks img{height:46px;width:auto;object-fit:contain;filter:grayscale(1) opacity(.62);transition:filter .3s ease}
+  .trusted .marks img:hover{filter:grayscale(0) opacity(1)}
+  .trusted .marks .duke{mix-blend-mode:multiply}
+  @media(max-width:600px){.trusted-inner{gap:1.4rem}.trusted .marks{gap:1.8rem}.trusted .marks img{height:38px}}
 </style>
 </head>
 <body>
@@ -59,6 +67,16 @@
     <div class="stat"><div class="n">45s–2m</div><div class="l">Target ticket times</div></div>
   </div>
 </div>
+
+<section class="trusted">
+  <div class="trusted-inner">
+    <span class="lbl">Trusted on campus at</span>
+    <div class="marks">
+      <img src="shared/osu_logo.png" alt="The Ohio State University">
+      <img src="shared/duke_logo.jpg" alt="Duke University" class="duke">
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="wrap">
