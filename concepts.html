@@ -1,55 +1,107 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Concepts & Cuisine — Brenen's Restaurant Group</title><meta name="description" content="Locotos, Il Forno, Breezy Bev Co, The Sub Hub and Brenens Cafe — the concept portfolio of Brenens Restaurant Group.">
+<title>Concepts & Cuisine — Brenen's Restaurant Group</title><meta name="description" content="Locotos, Il Forno, Brenz Pizza Co, Breezy Bev Co, The Sub Hub and Brenen's Cafe — the concept portfolio of Brenen's Restaurant Group.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="shared/brg.css" rel="stylesheet">
 <style>
   .nav-brand{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
   .nav-brand .nav-logo{height:52px!important;width:auto!important;max-width:none!important;object-fit:contain;display:block;flex:none}
   @media(max-width:600px){.nav-brand .nav-logo{height:40px!important}}
+
+  /* ===== Concept Switcher ===== */
+  .cx{--a:#8B3A2F;--b:#D9A441;--c:#2E6B5E;--bg:#F3EDE0;--ink:#241c18;--disp:"Fraunces",serif;
+    max-width:1200px;margin:0 auto;padding:0 1.5rem 1rem}
+
+  .cx-tabs{position:sticky;top:0;z-index:20;background:var(--paper,#faf8f4);
+    display:flex;gap:.35rem;flex-wrap:wrap;justify-content:center;
+    border-bottom:1px solid var(--line,#e2ddd2);padding:1rem 0}
+  .cx-tab{appearance:none;background:transparent;border:1px solid transparent;cursor:pointer;
+    padding:.6rem 1.05rem;border-radius:99px;display:flex;flex-direction:column;align-items:center;gap:1px;
+    font-family:"Montserrat",sans-serif;color:var(--stone,#6b6357);transition:all .25s ease;line-height:1.1}
+  .cx-tab .t-name{font-weight:700;font-size:.95rem}
+  .cx-tab .t-type{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+  .cx-tab:hover{background:rgba(0,0,0,.04);color:var(--ink,#1a1a1a)}
+  .cx-tab[aria-selected="true"]{background:var(--sel,#241c18);color:#fff;border-color:var(--sel,#241c18)}
+  .cx-tab[aria-selected="true"] .t-type{opacity:.8;color:var(--selb,#D9A441)}
+  .cx-tab:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+
+  .cx-show{margin-top:1.6rem;border-radius:22px;overflow:hidden;background:var(--bg);transition:background .5s ease}
+  .cx-fade{animation:cxfade .45s ease}
+  @keyframes cxfade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  .cs-hero{position:relative;min-height:340px;display:grid;grid-template-columns:1.05fr .95fr;color:#fff;background:var(--ink)}
+  .cs-hero-copy{padding:3rem 2.8rem;display:flex;flex-direction:column;justify-content:center;z-index:2}
+  .cs-kicker{font-family:"Montserrat",sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--b);margin-bottom:.7rem}
+  .cs-title{font-family:var(--disp);font-weight:800;line-height:.92;font-size:clamp(2.4rem,5vw,3.9rem);margin:0 0 .8rem;letter-spacing:-.01em}
+  .cs-title .lo{color:var(--b)}
+  .cs-sub{font-family:"Lora",serif;font-size:1.05rem;line-height:1.55;max-width:32rem;color:rgba(255,255,255,.85)}
+  .cs-hero-pic{position:relative;overflow:hidden;background:#000}
+  .cs-hero-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.94}
+  .cs-hero-pic .grad{position:absolute;inset:0;background:linear-gradient(90deg,var(--ink),transparent 42%)}
+  .cs-swatches{display:flex;gap:6px;margin-top:1.4rem}
+  .cs-swatches i{width:24px;height:24px;border-radius:6px;border:1.5px solid rgba(255,255,255,.55)}
+
+  .cs-feat{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,.08)}
+  .cs-feat .f{background:var(--bg);padding:1.4rem 1rem;text-align:center}
+  .cs-feat .f svg{width:26px;height:26px;stroke:var(--a);fill:none;stroke-width:1.6;margin-bottom:.5rem}
+  .cs-feat .f b{display:block;font-family:"Montserrat",sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+
+  .cs-menu{padding:3rem 2.8rem 2.4rem}
+  .cs-menu-head{text-align:center;margin-bottom:2rem}
+  .cs-menu-head .k{font-family:"Montserrat",sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--a)}
+  .cs-menu-head h3{font-family:var(--disp);font-weight:800;font-size:clamp(1.8rem,3.4vw,2.5rem);margin:.3rem 0 0;color:var(--ink)}
+  .cs-cats{display:grid;grid-template-columns:1fr 1fr;gap:2rem 3rem}
+  .cs-cat h4{font-family:var(--disp);font-weight:700;font-size:1.3rem;color:var(--a);margin:0 0 .1rem}
+  .cs-cat .cnote{font-family:"Lora",serif;font-style:italic;font-size:.85rem;color:var(--ink);opacity:.6;margin:0 0 .8rem}
+  .cs-cat ul{list-style:none;margin:0 0 .4rem;padding:0}
+  .cs-cat li{padding:.5rem 0;border-bottom:1px dotted rgba(0,0,0,.15)}
+  .cs-cat li:last-child{border-bottom:0}
+  .cs-rowline{display:flex;align-items:baseline;gap:.5rem}
+  .cs-rowline .mi{font-family:"Fraunces",serif;font-weight:600;font-size:1.02rem;color:var(--ink)}
+  .cs-rowline .dots{flex:1;border-bottom:1px dotted rgba(0,0,0,.25);transform:translateY(-3px)}
+  .cs-rowline .mp{font-family:"Montserrat",sans-serif;font-variant-numeric:tabular-nums;font-weight:700;font-size:.92rem;color:var(--c)}
+  .cs-md{font-family:"Lora",serif;font-size:.86rem;line-height:1.4;color:var(--ink);opacity:.7;margin:.15rem 0 0}
+
+  .cs-byo{margin:0 2.8rem 2.6rem;padding:1.6rem 1.8rem;border-radius:14px;border:1.5px dashed var(--a);
+    background:rgba(255,255,255,.4);display:flex;gap:1.2rem;align-items:flex-start}
+  .cs-byo .bt{font-family:var(--disp);font-weight:800;font-size:1.3rem;color:var(--a);white-space:nowrap}
+  .cs-byo .bd{font-family:"Lora",serif;font-size:.95rem;line-height:1.5;color:var(--ink);opacity:.85}
+
+  .cs-cta{text-align:center;padding:0 2.8rem 3rem}
+  .cs-cta a{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;
+    font-family:"Montserrat",sans-serif;font-weight:600;font-size:.92rem;padding:.85rem 1.7rem;border-radius:99px;transition:transform .2s,background .3s}
+  .cs-cta a:hover{transform:translateX(3px);background:var(--a)}
+
+  @media(max-width:860px){
+    .cs-hero{grid-template-columns:1fr}
+    .cs-hero-pic{min-height:220px;order:-1}
+    .cs-hero-copy{padding:2.2rem 1.5rem}
+    .cs-feat{grid-template-columns:repeat(2,1fr)}
+    .cs-menu{padding:2.2rem 1.5rem}
+    .cs-cats{grid-template-columns:1fr;gap:1.6rem}
+    .cs-byo{margin:0 1.5rem 2rem;flex-direction:column;gap:.5rem}
+    .cs-cta{padding:0 1.5rem 2.4rem}
+  }
+  @media(prefers-reduced-motion:reduce){.cx-fade{animation:none}.cx-show,.cs-cta a{transition:none}}
 </style></head><body><nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-brand"><img src="shared/brenens_logo_black_transparent.png" alt="Brenen's Restaurant Group" class="nav-logo"></a><div class="nav-links" id="navlinks"><a href="index.html">Home</a><a href="expertise.html">Our Expertise</a><a href="design.html">Design</a><a href="concepts.html">Concepts &amp; Cuisine</a><a href="community.html">Community</a><a href="contact.html">Contact</a></div><button class="nav-toggle" id="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
 <header class="page-hero"><div class="wrap"><p class="eyebrow" style="color:var(--accent-2)">Our Portfolio</p><h1>Concepts &amp; Cuisine</h1>
-<p class="ph-sub">A portfolio spanning the most popular and innovative campus cuisines — each its own brand, each made fresh daily.</p></div></header>
+<p class="ph-sub">Six distinct brands, one operator. Pick a concept to explore its story, its menu, and its feel.</p></div></header>
 
-<section class="section" style="padding-bottom:2rem"><div class="wrap"><div class="prose" style="text-align:center;max-width:52rem">
-<p>Brenen's Restaurant Group has developed a portfolio of concepts that bridge the gap between authenticity and familiarity. Using specialized chefs and endless market research, we develop menu offerings — and blend specialties into one efficient package — that thrive on campus.</p>
+<section class="section" style="padding-bottom:1rem"><div class="wrap"><div class="prose" style="text-align:center;max-width:52rem">
+<p>Brenen's Restaurant Group has built a portfolio of concepts that bridge authenticity and familiarity. Specialized chefs and endless market research shape each menu — and each brand has its own identity, made fresh daily.</p>
 </div></div></section>
 
-<div class="concept-row">
-<div class="pic"><img src="shared/card_locotos.jpg" alt="Locotos bowl"></div>
-<div class="copy"><h2>Locotos</h2><div class="ctype">Latin American Grill</div>
-<p>Locotos serves fresh, authentic Latin American cuisine in a familiar build-your-own bowl format. From hand-cut pico de gallo to in-house slow-roasted carnitas and barbacoa, every item is meticulously selected to create a unique culinary experience. (The evolution of our original Sazón concept.)</p>
-<a href="locotos/index.html" class="btn btn-dark">Visit Locotos →</a></div></div>
-
-<div class="concept-row flip">
-<div class="pic"><img src="shared/card_ilforno2.jpg" alt="Il Forno pasta"></div>
-<div class="copy"><h2>Il Forno Kitchen</h2><div class="ctype">Italian Kitchen</div>
-<p>Il Forno specializes in authentic Italian pastas, wood-fired artisan pizzas, and fresh vibrant salads. Fresh sauces, flavorful toppings, and great customer service combine into endless combinations of exciting meals — proudly serving campus communities since 2016.</p>
-<a href="ilforno/index.html" class="btn btn-dark">Visit Il Forno →</a></div></div>
-
-<div class="concept-row">
-<div class="pic"><img src="shared/card_brenz.jpg" alt="Brenz Pizza Co pizza"></div>
-<div class="copy"><h2>Brenz Pizza Co</h2><div class="ctype">Handcrafted Pizza</div>
-<p>Award-winning, handcrafted pizza built on dough made fresh on the premises and aged in-house for at least 24 hours. From house-made sauces to premium meats and fresh-sliced produce, every pie is meticulously prepared — plus jumbo wings, salads, subs, and wraps. A national Pizza Pizzazz competition standout since 2014.</p>
-<a href="https://www.brenz.com/" target="_blank" rel="noopener" class="btn btn-dark">Visit Brenz →</a></div></div>
-
-<div class="concept-row flip">
-<div class="pic"><img src="shared/card_breezy.jpg" alt="Breezy Bev Co"></div>
-<div class="copy"><h2>Breezy Bev Co</h2><div class="ctype">Coastal Refreshers</div>
-<p>A coastal refresher company with a Nantucket soul — functional cold brews, fruit-forward coolers, tide tea lattes, swell soft serve and protein shakes. Order ahead, grab from the pickup wall, and go. Skip the line, live breezy.</p>
-<a href="breezy/index.html" class="btn btn-dark">Visit Breezy →</a></div></div>
-
-<div class="concept-row">
-<div class="pic"><img src="shared/card_subhub.jpg" alt="The Sub Hub"></div>
-<div class="copy"><h2>The Sub Hub</h2><div class="ctype">Submarine Sandwiches</div>
-<p>Fresh-baked sub buns and sourdough baguettes, quality meats and cheeses, built to order. Ten signature subs available as a sub, a wrap, or a bowl — and every order comes with a side. Warmth, quality, craftsmanship.</p>
-<a href="subhub/index.html" class="btn btn-dark">Visit The Sub Hub →</a></div></div>
-
-<div class="concept-row flip">
-<div class="pic"><img src="shared/card_brenens.jpg" alt="Brenen's Cafe"></div>
-<div class="copy"><h2>Brenen's Cafe</h2><div class="ctype">Café · Coffee · Since 1986</div>
-<p>Since 1986, Brenen's has provided university communities with café-style sandwiches and salads, fine specialty coffees, baked goods, and fresh fruit smoothies. Quality ingredients and daily specials provide an elevated café experience at multiple Ohio State locations.</p>
-<a href="https://www.brenensinc.com/" target="_blank" rel="noopener" class="btn btn-dark">Visit Brenen's Cafe →</a></div></div>
+<section class="cx" id="cx">
+  <div class="cx-tabs" role="tablist" aria-label="Concepts">
+    <button class="cx-tab" role="tab" aria-selected="true"  data-i="0"><span class="t-name">Locotos</span><span class="t-type">Latin Grill</span></button>
+    <button class="cx-tab" role="tab" aria-selected="false" data-i="1"><span class="t-name">Il Forno</span><span class="t-type">Italian Kitchen</span></button>
+    <button class="cx-tab" role="tab" aria-selected="false" data-i="2"><span class="t-name">Brenz</span><span class="t-type">Pizza Co</span></button>
+    <button class="cx-tab" role="tab" aria-selected="false" data-i="3"><span class="t-name">Breezy</span><span class="t-type">Bev Co</span></button>
+    <button class="cx-tab" role="tab" aria-selected="false" data-i="4"><span class="t-name">The Sub Hub</span><span class="t-type">Submarines</span></button>
+    <button class="cx-tab" role="tab" aria-selected="false" data-i="5"><span class="t-name">Brenen's Cafe</span><span class="t-type">Since 1986</span></button>
+  </div>
+  <div class="cx-show" id="cxShow" role="tabpanel"><!-- injected --></div>
+</section>
 
 <section class="section" style="background:var(--cream);text-align:center"><div class="wrap">
 <p class="eyebrow">Always Evolving</p><h2 style="font-size:2.4rem;margin:.5rem 0 1rem">New concepts, on the horizon.</h2>
@@ -60,8 +112,215 @@
 <div class="foot-brand"><div class="fn">Brenen's Restaurant Group</div><div class="ft">Since 1986</div>
 <p>Providing university communities the highest quality restaurants with a local touch — at OSU, Duke, and beyond.</p></div>
 <div class="foot-col"><h4>Explore</h4><a href="expertise.html">Our Expertise</a><a href="design.html">Design</a><a href="concepts.html">Concepts &amp; Cuisine</a><a href="community.html">Community</a><a href="contact.html">Contact</a></div>
-<div class="foot-col"><h4>Concepts</h4><a href="locotos/index.html">Locotos</a><a href="breezy/index.html">Breezy Bev Co</a><a href="ilforno/index.html">Il Forno Kitchen</a><a href="subhub/index.html">The Sub Hub</a><a href="https://www.brenensinc.com/" target="_blank" rel="noopener">Brenen's Cafe</a></div>
+<div class="foot-col"><h4>Concepts</h4><a href="locotos/index.html">Locotos</a><a href="ilforno/index.html">Il Forno Kitchen</a><a href="https://www.brenz.com/" target="_blank" rel="noopener">Brenz Pizza Co</a><a href="breezy/index.html">Breezy Bev Co</a><a href="subhub/index.html">The Sub Hub</a><a href="https://www.brenensinc.com/" target="_blank" rel="noopener">Brenen's Cafe</a></div>
 </div>
 <div class="foot-base"><span>© 2026 Brenen's Restaurant Group. All rights reserved.</span><span>Columbus, Ohio · brenensrg.com</span></div>
 </footer>
-<script>const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');if(t){t.addEventListener('click',()=>l.classList.toggle('open'));l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));}</script></body></html>
+<script>
+const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');
+if(t){t.addEventListener('click',()=>l.classList.toggle('open'));l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));}
+
+// SVG icon set (stroke uses currentColor via CSS)
+const IC={
+  leaf:'<path d="M11 3C6 3 3 7 3 12c0 3 1 5 3 6 6-1 12-6 12-15-3 0-5 0-7 0z"/><path d="M6 18C10 14 14 10 17 5"/>',
+  flame:'<path d="M12 3c1 3-2 4-2 7a2 2 0 004 0c0-1 0-2-1-3 3 1 5 4 5 8a6 6 0 01-12 0c0-4 4-6 6-12z"/>',
+  chili:'<path d="M5 15c4 4 10 2 13-3 1-2 1-4 0-5-1 2-3 2-4 1"/><path d="M14 8c1-2 3-3 5-2"/>',
+  mortar:'<path d="M4 10h16M6 10c0 5 3 8 6 8s6-3 6-8M12 3v4"/>',
+  users:'<circle cx="8" cy="9" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5"/><path d="M15 7a3 3 0 010 6M22 20c0-2-1-4-4-4.5"/>',
+  wheat:'<path d="M12 3v18M12 7c-2-2-5-1-5-1s0 3 2 4M12 7c2-2 5-1 5-1s0 3-2 4M12 13c-2-2-5-1-5-1s0 3 2 4M12 13c2-2 5-1 5-1s0 3-2 4"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  heart:'<path d="M12 20s-7-4.5-9-9c-1.3-3 1-6 4-5 2 .5 3 2 5 3 2-1 3-2.5 5-3 3-1 5.3 2 4 5-2 4.5-9 9-9 9z"/>',
+  cup:'<path d="M5 8h11v5a5 5 0 01-10 0zM16 9h2a2 2 0 010 4h-2M5 20h11"/>',
+  wave:'<path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0M2 17c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/>',
+  snow:'<path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9M8 4l4 3 4-3M8 20l4-3 4 3"/>',
+  bread:'<path d="M4 12a4 4 0 018 0 4 4 0 018 0v3a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M9 10v6M13 10v6"/>',
+  star:'<path d="M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z"/>',
+  bean:'<path d="M8 4c6 0 10 5 8 11-1 4-6 6-9 4C3 17 2 10 5 6c1-1 2-2 3-2z"/>',
+  coffee:'<path d="M4 8h12v4a5 5 0 01-10 0zM16 9h2a2 2 0 010 4h-2"/><path d="M6 3c0 1 1 1 1 2M10 3c0 1 1 1 1 2"/>'
+};
+const svg=n=>`<svg viewBox="0 0 24 24">${IC[n]||''}</svg>`;
+
+const CONCEPTS=[
+{ // 0 LOCOTOS
+ name:"Locotos",badge:"Latin American Grill",title:["Authentic Latin.","Made Fresh Daily."],
+ disp:'"Barlow Condensed",sans-serif',
+ a:"#993430",b:"#B17126",c:"#2E6B5E",bg:"#F3EDE0",ink:"#111316",sel:"#111316",selb:"#B17126",
+ img:"shared/card_locotos.jpg",href:"locotos/index.html",cta:"Visit Locotos",
+ blurb:"Bold, fresh, and rooted in the Andes. We serve build-your-own bowls, plates, and tacos with handcrafted flavors and premium ingredients.",
+ feats:[["leaf","Fresh"],["flame","Grilled"],["chili","Bold Flavor"],["mortar","Handmade"]],
+ cats:[
+  {h:"Build-Your-Own Bowls",n:"Rice or greens base, your protein, your toppings",items:[
+   ["Barbacoa Bowl","Slow-roasted beef, cilantro-lime rice, black beans, pico","10.95"],
+   ["Pollo Verde Bowl","Salsa-verde chicken, plantains, corn, crema","10.25"],
+   ["Carnitas Bowl","Citrus pork, black beans, pickled onion, queso fresco","10.50"],
+   ["Veggie Andes Bowl","Roasted vegetables, choclo, avocado, chimichurri","9.75"]]},
+  {h:"Tacos & Plates",n:"Served on hand-pressed tortillas",items:[
+   ["Carnitas Tacos (3)","Citrus pork, pickled onion, queso fresco","9.50"],
+   ["Barbacoa Tacos (3)","Slow-roasted beef, cilantro, onion, lime","9.95"],
+   ["Grilled Plantain Plate","Sweet plantains, black beans, crema","7.50"],
+   ["Chimichurri Steak Plate","Grilled steak, rice, salsa criolla","12.50"]]}],
+ byo:["Your Coast, Your Bowl","Pick a base, a protein, and pile on hand-cut pico, black beans, choclo, plantains, avocado, and house salsas — carnitas, barbacoa, pollo verde, or roasted veg."]
+},
+{ // 1 IL FORNO
+ name:"Il Forno Kitchen",badge:"Italian Kitchen",title:["Wood-Fired.","Made to Order."],
+ disp:'"Fraunces",serif',
+ a:"#B12A26",b:"#E4B363",c:"#6a7b3f",bg:"#F5F1E8",ink:"#2A2320",sel:"#2A2320",selb:"#E4B363",
+ img:"shared/design_ilforno.webp",href:"ilforno/index.html",cta:"Visit Il Forno",
+ blurb:"Authentic Italian pastas, wood-fired artisan pizzas, and vibrant salads. Fresh sauces and flavorful toppings in endless combinations — serving campus since 2016.",
+ feats:[["flame","Wood-Fired"],["wheat","Fresh Pasta"],["leaf","Vibrant Salads"],["heart","Made With Care"]],
+ cats:[
+  {h:"Wood-Fired Pizzas",n:"Personal artisan pies, blistered crust",items:[
+   ["Spicy Il Forno","Pepperoni, hot honey, basil, chili flake","11.50"],
+   ["Margherita","San Marzano, fresh mozzarella, basil","9.75"],
+   ["Quattro Formaggi","Mozzarella, provolone, parmesan, gorgonzola","11.00"],
+   ["Prosciutto & Arugula","Prosciutto, arugula, shaved parmesan","12.25"]]},
+  {h:"Pastas & Salads",n:"Tossed to order in fresh sauces",items:[
+   ["Chicken Basil Pesto","Grilled chicken, pesto cream, penne","10.75"],
+   ["Pasta Pomodoro","San Marzano tomato, garlic, basil","9.25"],
+   ["Fettuccine Alfredo","Parmesan cream, cracked pepper","9.75"],
+   ["San Pellegrino Salad","Arugula, shaved parmesan, lemon vinaigrette","8.50"]]}],
+ byo:["Your Pasta, Your Way","Choose your pasta, pick a sauce — pomodoro, alfredo, pesto cream, or aglio e olio — then add grilled chicken, meatballs, or roasted vegetables."]
+},
+{ // 2 BRENZ
+ name:"Brenz Pizza Co",badge:"Handcrafted Pizza",title:["24-Hour Dough.","Bold Pizza."],
+ disp:'"Fraunces",serif',
+ a:"#E23B2E",b:"#F2C14E",c:"#555555",bg:"#F5F5F3",ink:"#141414",sel:"#141414",selb:"#E23B2E",
+ img:"shared/card_brenz.jpg",href:"https://www.brenz.com/",cta:"Visit Brenz",
+ blurb:"Award-winning, handcrafted pizza on dough made fresh on the premises and aged in-house at least 24 hours. House-made sauces, premium meats, fresh-sliced produce — a national Pizza Pizzazz standout since 2014.",
+ feats:[["clock","24-Hour Dough"],["flame","Fired Fresh"],["star","Award-Winning"],["chili","Jumbo Wings"]],
+ cats:[
+  {h:"Signature Pizzas",n:"Hand-tossed, 24-hour aged dough",items:[
+   ["The Brenz","Pepperoni cups, sausage, aged mozzarella","13.00"],
+   ["Buffalo Chicken","Crispy chicken, buffalo, blue cheese drizzle","13.50"],
+   ["Margherita Fresca","Fresh mozzarella, basil, olive oil","11.50"],
+   ["Meat Lovers","Pepperoni, sausage, bacon, ham","14.00"]]},
+  {h:"Wings & Handhelds",n:"House-made sauces",items:[
+   ["Jumbo Wings (8)","Hand-tossed, choice of sauce, ranch","11.50"],
+   ["Buffalo Chicken Sub","Crispy chicken, buffalo, blue cheese","10.00"],
+   ["Italian Sub","Salami, capicola, provolone, oil & vinegar","9.75"],
+   ["Garden Salad","Mixed greens, tomato, cucumber, house vin","7.25"]]}],
+ byo:["Build Your Brenz","Start with the 24-hour dough and pile on premium meats, fresh-sliced produce, and house-made sauces — your pie, your rules."]
+},
+{ // 3 BREEZY
+ name:"Breezy Bev Co",badge:"Coastal Refreshers",title:["Order.","Grab. Go."],
+ disp:'"Fraunces",serif',
+ a:"#1C3A5E",b:"#C9A24B",c:"#5E9C93",bg:"#EFEEE6",ink:"#16283f",sel:"#16283f",selb:"#C9A24B",
+ img:"shared/card_breezy.jpg",href:"breezy/index.html",cta:"Visit Breezy",
+ blurb:"A coastal refresher company with a Nantucket soul — functional mushroom cold brews, fruit-forward coolers, tide tea lattes, and swell soft serve. Order ahead, grab from the pickup wall, and go.",
+ feats:[["wave","Coastal Vibes"],["coffee","Functional Cold Brew"],["snow","Swell Soft Serve"],["leaf","Fruit-Forward"]],
+ cats:[
+  {h:"Coastal Cold Brew",n:"Functional mushroom cold brew",items:[
+   ["Saltwater Caramel","Caramel syrup, sea salt, caramel ribbon, milk","5.75"],
+   ["Vanilla Tide","Vanilla, milk of choice, sweet cream","5.50"],
+   ["Coconut Breaker","Coconut, vanilla, milk of choice, sweet cream","5.75"],
+   ["Mocha Drift","Chocolate sauce, chocolate ribbon, sweet cream","5.95"]]},
+  {h:"Breezy Coolers",n:"Refreshing, fruit-forward drinks",items:[
+   ["Ocean Mist","Lemonade, blueberry, coconut, butterfly pea float","5.95"],
+   ["Island Breeze","Green tea, mango, peach, coconut, basil","5.95"],
+   ["Pink Sand","Lemonade, strawberry purée, fresh strawberries, basil","5.75"],
+   ["Sailors Sky","Lemonade, watermelon cooler, mint, butterfly pea","5.75"],
+   ["Ginger Shore","Green tea, lemonade, ginger, mint, lemon","5.75"],
+   ["Green Coast Matcha","Matcha, lemonade, mango, mint, lemon","5.95"],
+   ["Coastal Chill","Lemonade, ginger, watermelon cooler, strawberry","5.75"]]},
+  {h:"Tide Tea Lattes",n:"Chai + Matcha",items:[
+   ["Matcha Drift","Matcha, vanilla, mint, strawberry swirl","5.95"],
+   ["Blueberry Matcha Rise","Matcha, blueberry, mint, fresh blueberries","5.95"],
+   ["Harbor Chai","Spiced chai, vanilla, milk of choice","5.50"],
+   ["Salty Captain Chai","Spiced chai, strawberry, vanilla, strawberries","5.75"]]},
+  {h:"Swell Soft Serve",n:"Layered dessert cups",items:[
+   ["Caramel Swell","Vanilla soft serve, caramel, sea salt","4.95"],
+   ["Mocha Ripple","Vanilla soft serve, chocolate, cookie crumble","4.95"],
+   ["Berry Tide","Vanilla soft serve, blueberry, granola","4.95"]]}],
+ byo:["Your Coast, Your Brew","Start with mushroom cold brew or a cooler base, pick vanilla, caramel, coconut, or mocha, add purées and fresh fruit, and finish with sweet cream."]
+},
+{ // 4 SUB HUB
+ name:"The Sub Hub",badge:"Submarine Sandwiches",title:["Bold Flavor.","Elevated Subs."],
+ disp:'"Barlow Condensed",sans-serif',
+ a:"#C25A2B",b:"#E8A23D",c:"#7a5c3a",bg:"#FBF6EC",ink:"#1c1f26",sel:"#1c1f26",selb:"#E8A23D",
+ img:"shared/card_subhub.jpg",href:"subhub/index.html",cta:"Visit The Sub Hub",
+ blurb:"Fresh-baked bread, premium ingredients, crafted with care. Ten signature subs — available as a sub, a wrap, or a bowl — and every order comes with a side.",
+ feats:[["leaf","Fresh Ingredients"],["bread","Baked Daily"],["flame","Bold Flavor"],["heart","Made With Care"]],
+ cats:[
+  {h:"Signature Subs",n:"Sub, wrap, or bowl — comes with a side",items:[
+   ["The Italian","Ham, pepperoni, salami, capicola, provolone, oil & vin","9.75"],
+   ["Club Royal","Roast beef, turkey, bacon, provolone, mayo","9.95"],
+   ["Roast Beef Dip","Roast beef, provolone, caramelized onions, au jus","10.25"],
+   ["Jammin' Turkey","Turkey, hot pepper jam, cream cheese, arugula","9.50"],
+   ["Classic Veggie","Provolone, tomato, cucumber, peppers, oil & vin","8.25"]]},
+  {h:"Sides & Extras",n:"Every order comes with one",items:[
+   ["Kettle Chips","House-seasoned, sea salt","—"],
+   ["Pasta Salad","Rotini, vegetables, Italian dressing","—"],
+   ["Fresh Fruit Cup","Seasonal cut fruit","—"],
+   ["Bakery Cookie","Baked fresh daily","2.00"]]}],
+ byo:["Build Your Perfect Sub","Start with fresh-baked bread and pile on premium meats, cheeses, and crisp veggies. Add house-made sauces to make it yours — as a sub, wrap, or bowl."]
+},
+{ // 5 BRENEN'S CAFE
+ name:"Brenen's Cafe",badge:"Café · Coffee · Since 1986",title:["Elevated Café.","Since 1986."],
+ disp:'"Fraunces",serif',
+ a:"#8a6d2f",b:"#C9A24B",c:"#555555",bg:"#F4F1EA",ink:"#1A1A1A",sel:"#1A1A1A",selb:"#C9A24B",
+ img:"shared/design_brenens.jpg",href:"https://www.brenensinc.com/",cta:"Visit Brenen's Cafe",
+ blurb:"Since 1986, Brenen's has served café-style sandwiches and salads, fine specialty coffees, baked goods, and fresh fruit smoothies at multiple Ohio State locations.",
+ feats:[["coffee","Specialty Coffee"],["bread","Fresh-Baked"],["leaf","Café Fresh"],["star","Since 1986"]],
+ cats:[
+  {h:"Café Sandwiches & Salads",n:"Made to order",items:[
+   ["Turkey Bacon Ranch","Roast turkey, applewood bacon, ciabatta","8.95"],
+   ["Caprese Panini","Fresh mozzarella, tomato, basil, balsamic","8.50"],
+   ["Chicken Caesar Wrap","Grilled chicken, romaine, parmesan","8.75"],
+   ["Harvest Salad","Greens, apple, candied pecans, goat cheese","8.95"]]},
+  {h:"Coffee & Smoothies",n:"Fine specialty coffees & fresh fruit",items:[
+   ["Specialty Latte","House espresso, steamed milk, choice of syrup","4.50"],
+   ["Cold Brew","Slow-steeped, smooth finish","3.95"],
+   ["Strawberry Smoothie","Fresh fruit, yogurt, honey","5.25"],
+   ["Mango Sunrise Smoothie","Mango, banana, orange, yogurt","5.25"]]}],
+ byo:["Daily Specials","Rotating chef specials, fresh-baked goods, and seasonal smoothies — ask about today's board at your OSU location."]
+}
+];
+
+const show=document.getElementById('cxShow'),tabs=[...document.querySelectorAll('.cx-tab')],cx=document.getElementById('cx');
+const ext=h=>/^https?:/.test(h);
+function catHTML(cat){
+  const rows=cat.items.map(m=>`<li>
+    <div class="cs-rowline"><span class="mi">${m[0]}</span><span class="dots"></span><span class="mp">${m[2]==='—'?'':'$'}${m[2]}</span></div>
+    <div class="cs-md">${m[1]}</div></li>`).join('');
+  return `<div class="cs-cat"><h4>${cat.h}</h4><p class="cnote">${cat.n}</p><ul>${rows}</ul></div>`;
+}
+function render(i){
+  const d=CONCEPTS[i];
+  cx.style.setProperty('--sel',d.sel);cx.style.setProperty('--selb',d.selb);
+  const S=show.style;
+  S.setProperty('--a',d.a);S.setProperty('--b',d.b);S.setProperty('--c',d.c);
+  S.setProperty('--bg',d.bg);S.setProperty('--ink',d.ink);S.setProperty('--disp',d.disp);
+  const feats=d.feats.map(f=>`<div class="f">${svg(f[0])}<b>${f[1]}</b></div>`).join('');
+  const cats=d.cats.map(catHTML).join('');
+  const title=`<span class="lo">${d.title[0]}</span><br>${d.title[1]}`;
+  show.innerHTML=`
+   <div class="cs-hero">
+     <div class="cs-hero-copy">
+       <div class="cs-kicker">${d.badge}</div>
+       <h2 class="cs-title">${title}</h2>
+       <p class="cs-sub">${d.blurb}</p>
+       <div class="cs-swatches"><i style="background:${d.a}"></i><i style="background:${d.b}"></i><i style="background:${d.c}"></i></div>
+     </div>
+     <div class="cs-hero-pic"><img src="${d.img}" alt="${d.name}"><div class="grad"></div></div>
+   </div>
+   <div class="cs-feat">${feats}</div>
+   <div class="cs-menu">
+     <div class="cs-menu-head"><div class="k">The Menu</div><h3>${d.name}</h3></div>
+     <div class="cs-cats">${cats}</div>
+   </div>
+   <div class="cs-byo"><div class="bt">${d.byo[0]}</div><div class="bd">${d.byo[1]}</div></div>
+   <div class="cs-cta"><a href="${d.href}"${ext(d.href)?' target="_blank" rel="noopener"':''}>${d.cta} →</a></div>`;
+  show.classList.remove('cx-fade');void show.offsetWidth;show.classList.add('cx-fade');
+}
+function select(i){tabs.forEach((t,x)=>t.setAttribute('aria-selected',x===i?'true':'false'));render(i);}
+tabs.forEach((tab,i)=>{
+  tab.addEventListener('click',()=>select(i));
+  tab.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();
+      const n=(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length;tabs[n].focus();select(n);}
+  });
+});
+render(0);
+</script>
+
+</body></html>
