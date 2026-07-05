@@ -34,6 +34,18 @@
   .trusted .marks img:hover{filter:grayscale(0) opacity(1)}
   .trusted .marks .duke{mix-blend-mode:multiply}
   @media(max-width:600px){.trusted-inner{gap:1.4rem}.trusted .marks{gap:1.8rem}.trusted .marks img{height:38px}}
+
+  /* --- mobile nav fix (overrides brg.css) --- */
+  .nav{position:relative;z-index:90}
+  .nav-inner{position:relative}
+  @media(max-width:920px){
+    .nav-toggle{display:block!important}
+    .nav-links{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;margin:0!important;background:#faf8f4!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:.4rem 1.5rem 1rem!important;box-shadow:0 16px 32px rgba(0,0,0,.15)!important;border-bottom:1px solid #e2ddd2!important;transform:none!important;max-height:none!important;opacity:1!important;visibility:visible!important;text-align:left!important}
+    .nav-links.open{display:flex!important}
+    .nav-links a{display:block!important;padding:.85rem 0!important;border-bottom:1px solid #e8e3d8!important;font-size:1rem!important;color:#1a1a1a!important}
+    .nav-links a:last-child{border-bottom:0!important}
+  }
+  @media(min-width:921px){.nav-toggle{display:none!important}}
 </style>
 </head>
 <body>
@@ -215,9 +227,7 @@
 </footer>
 
 <script>
-const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');
-t.addEventListener('click',()=>l.classList.toggle('open'));
-l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));
+(function(){var t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');if(!t||!l)return;t.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('open');});l.addEventListener('click',function(e){if(e.target.tagName==='A')l.classList.remove('open');});document.addEventListener('click',function(e){if(!e.target.closest('.nav'))l.classList.remove('open');});})();
 </script>
 </body>
 </html>

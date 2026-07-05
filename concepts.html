@@ -14,7 +14,7 @@
 <meta name="twitter:description" content="Locotos, Pastello Italian Kitchen, Brenz Pizza Co, Breezy Bev Co, The Sub Hub, Brenen's Cafe and Chefs Kitchen — the Brenen's Restaurant Group portfolio.">
 <meta name="twitter:image" content="https://brenensrg.com/shared/hero_home.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Barlow+Condensed:wght@500;600;700&family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="shared/brg.css" rel="stylesheet">
 <style>
   .nav-brand{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
@@ -113,6 +113,18 @@
     .cs-cta{padding:0 1.5rem 2.4rem}
   }
   @media(prefers-reduced-motion:reduce){.cx-fade{animation:none}.cx-show,.cs-cta a{transition:none}}
+
+  /* --- mobile nav fix (overrides brg.css) --- */
+  .nav{position:relative;z-index:90}
+  .nav-inner{position:relative}
+  @media(max-width:920px){
+    .nav-toggle{display:block!important}
+    .nav-links{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;margin:0!important;background:#faf8f4!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:.4rem 1.5rem 1rem!important;box-shadow:0 16px 32px rgba(0,0,0,.15)!important;border-bottom:1px solid #e2ddd2!important;transform:none!important;max-height:none!important;opacity:1!important;visibility:visible!important;text-align:left!important}
+    .nav-links.open{display:flex!important}
+    .nav-links a{display:block!important;padding:.85rem 0!important;border-bottom:1px solid #e8e3d8!important;font-size:1rem!important;color:#1a1a1a!important}
+    .nav-links a:last-child{border-bottom:0!important}
+  }
+  @media(min-width:921px){.nav-toggle{display:none!important}}
 </style></head><body><nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-brand"><img src="shared/brenens_logo_black_transparent.png" alt="Brenen's Restaurant Group" class="nav-logo"></a><div class="nav-links" id="navlinks"><a href="index.html">Home</a><a href="expertise.html">Our Expertise</a><a href="design.html">Design</a><a href="concepts.html">Concepts &amp; Cuisine</a><a href="community.html">Community</a><a href="contact.html">Contact</a></div><button class="nav-toggle" id="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
 <header class="page-hero"><div class="wrap"><p class="eyebrow" style="color:var(--accent-2)">Our Portfolio</p><h1>Concepts &amp; Cuisine</h1>
 <p class="ph-sub">Seven distinct brands, one operator — and an eighth, Olea, on the way. Pick a concept to explore its story, its menu, and its feel.</p></div></header>
@@ -150,8 +162,7 @@
 <div class="foot-base"><span>© 2026 Brenen's Restaurant Group. All rights reserved.</span><span>Columbus, Ohio · brenensrg.com · <a href="privacy.html" style="color:inherit">Privacy</a></span></div>
 </footer>
 <script>
-const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');
-if(t){t.addEventListener('click',()=>l.classList.toggle('open'));l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));}
+(function(){var t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');if(!t||!l)return;t.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('open');});l.addEventListener('click',function(e){if(e.target.tagName==='A')l.classList.remove('open');});document.addEventListener('click',function(e){if(!e.target.closest('.nav'))l.classList.remove('open');});})();
 
 // SVG icon set (stroke uses currentColor via CSS)
 const IC={
@@ -189,11 +200,11 @@ const svg=n=>`<svg viewBox="0 0 24 24">${IC[n]||''}</svg>`;
    ========================================================================== */
 const CONCEPTS=[
 { // 0 LOCOTOS
- name:"Locotos",logo:"shared/concepts/locotos_logo.png",tag:"Bold Latin American flavor, built your way",badge:"Latin American Grill",title:["Authentic Latin.","Made Fresh Daily."],
- disp:'"Barlow Condensed",sans-serif',
- a:"#993430",b:"#B17126",c:"#2E6B5E",bg:"#F3EDE0",ink:"#111316",sel:"#111316",selb:"#B17126",
- img:"shared/concepts/locotos_hero.jpg",href:"",cta:"",gal:["shared/concepts/locotos_barbacoa.jpg","shared/concepts/locotos_carnitas.jpg","shared/concepts/locotos_chicken.jpg"],
- blurb:"Bold, fresh, and rooted in the Andes. We serve build-your-own bowls, plates, and tacos with handcrafted flavors and premium ingredients.",
+ name:"Locotos",logo:"shared/concepts/locotos_logo.png",tag:"Authentic Latin. Made Fresh Daily.",badge:"Latin American Grill",title:["Authentic Latin.","Made Fresh Daily."],
+ disp:'"Barlow Condensed","Arial Narrow",sans-serif',
+ a:"#993430",b:"#B17126",c:"#87A995",bg:"#EDE4D6",ink:"#111316",sel:"#111316",selb:"#B17126",
+ img:"shared/concepts/locotos_hero.jpg",href:"",cta:"",gal:["shared/concepts/locotos_barbacoa.jpg","shared/concepts/sazon3.jpg","shared/concepts/locotos_chicken.jpg"],
+ blurb:"A vibrant Latin American grill rooted in the Andes. Bold, fresh bowls, plates, and tacos with handcrafted flavors and premium ingredients — from hand-cut pico de gallo to slow-roasted carnitas and barbacoa made in house. Formerly Sazón at Duke’s Broadhead Center.",
  feats:[["leaf","Fresh"],["flame","Grilled"],["chili","Bold Flavor"],["mortar","Handmade"]],
  cats:[
   {h:"Build-Your-Own Bowls",n:"Rice or greens base, your protein, your toppings",items:[
@@ -209,10 +220,10 @@ const CONCEPTS=[
  byo:["Your Coast, Your Bowl","Pick a base, a protein, and pile on hand-cut pico, black beans, choclo, plantains, avocado, and house salsas — carnitas, barbacoa, pollo verde, or roasted veg."]
 },
 { // 1 PASTELLO (formerly Il Forno)
- name:"Pastello Italian Kitchen",logo:"shared/concepts/pastello_lockup.png",tag:"Your pasta, tossed to order",badge:"Italian Kitchen · Custom Pasta Bowls",title:["Your Pasta.","Your Bowl."],
- disp:'"Fraunces",serif',
- a:"#3F4A2E",b:"#C4744C",c:"#3F4A2E",bg:"#F7F3EC",ink:"#26291E",sel:"#26291E",selb:"#C4744C",
- img:"shared/concepts/pastello_penne.jpg",href:"",cta:"",gal:["shared/concepts/pastello_pasta.jpg","shared/concepts/pastello_catering.jpg","shared/concepts/pastello_pesto.jpg"],
+ name:"Pastello Italian Kitchen",logo:"shared/concepts/pastello_logo.png",tag:"Your pasta, tossed to order",badge:"Italian Kitchen · Custom Pasta Bowls",title:["Your Pasta.","Your Bowl."],
+ disp:'"Barlow Condensed","Arial Narrow",sans-serif',
+ a:"#CE2A28",b:"#2E7D46",c:"#141414",bg:"#F7F5F1",ink:"#141414",sel:"#141414",selb:"#CE2A28",
+ img:"shared/concepts/pastello_penne.jpg",href:"",cta:"",gal:["shared/concepts/pastello_spaghetti.jpg","shared/concepts/pastello_catering.jpg","shared/concepts/pastello_pesto.jpg"],
  blurb:"House-made is the standard at Pastello. Custom pasta bowls tossed to order — fresh pastas, house-made sauces, and premium proteins in endless combinations — built for the speed of a campus lunch rush, serving Duke since 2016.",
  feats:[["wheat","Fresh Pasta"],["flame","Tossed to Order"],["leaf","House-Made Sauces"],["heart","Made With Care"]],
  cats:[
@@ -256,11 +267,11 @@ const CONCEPTS=[
  byo:["Pizza Your Way","Pick your size (8\" personal to 16\" large), your base — red sauce, garlic butter, olive oil, or ranch — and build from 25+ premium toppings, with after-bake finishes like hot honey drizzle, feta, and fresh basil. Gluten-free friendly crusts available in 10\"."]
 },
 { // 3 BREEZY
- name:"Breezy Bev Co",logo:"shared/concepts/breezy_logo.png",tag:"Nantucket vibes, campus speed",badge:"Coastal Refreshers · Nantucket State of Mind",title:["Take a Flavor","Vacation."],
- disp:'"Fraunces",serif',
- a:"#22314F",b:"#7E9EBF",c:"#B85C4A",bg:"#F5F2E9",ink:"#1B2436",sel:"#22314F",selb:"#7E9EBF",
+ name:"Breezy Bev Co",logo:"shared/concepts/breezy_logo.png",tag:"Good Vibes. Cold Drinks.",badge:"Coastal Refreshers · Nantucket State of Mind",title:["Take a Flavor","Vacation."],
+ disp:'"Barlow Condensed","Arial Narrow",sans-serif',
+ a:"#0D223F",b:"#69B6D6",c:"#F0B323",bg:"#F6F1E6",ink:"#0D223F",sel:"#0D223F",selb:"#69B6D6",
  img:"shared/concepts/breezy_lineup.jpg",href:"",cta:"",gal:["shared/concepts/breezy_coldbrew.jpg","shared/concepts/breezy_matcha.jpg","shared/concepts/breezy_strawberry.jpg"],
- blurb:"Every drink is a day at the shore. Breezy is a coastal refresher company with a Nantucket soul — striped cans of cold brew, matcha, fruit coolers, and taro, chilled and ready. Order ahead, grab from the pickup wall, and set sail for class.",
+ blurb:"A smooth sip. A salty breeze. That’s the good life. Breezy is a coastal refresher company with a Nantucket soul — striped cans of cold brew, matcha, fruit coolers, and taro, skippered by Captain Salty the seagull. Order ahead, grab from the pickup wall, and set sail for class.",
  feats:[["wave","Coastal Vibes"],["coffee","Functional Cold Brew"],["snow","Swell Soft Serve"],["leaf","Fruit-Forward"]],
  cats:[
   {h:"Coastal Cold Brew",n:"Functional mushroom cold brew",items:[
@@ -289,10 +300,10 @@ const CONCEPTS=[
 },
 { // 4 SUB HUB
  name:"The Sub Hub",logo:"shared/concepts/subhub_logo.png",tag:"Made fresh. Made local. Made for campus.",badge:"Submarine Sandwiches",title:["Bold Flavor.","Elevated Subs."],
- disp:'"Barlow Condensed",sans-serif',
- a:"#C25A2B",b:"#E8A23D",c:"#7a5c3a",bg:"#FBF6EC",ink:"#1c1f26",sel:"#1c1f26",selb:"#E8A23D",
- img:"shared/concepts/card_subhub.jpg",href:"",cta:"",gal:["shared/concepts/card_subhub.jpg","shared/concepts/brenens5.jpg","shared/concepts/timing1.jpg"],
- blurb:"Fresh-baked bread, premium ingredients, crafted with care. Ten signature subs — available as a sub, a wrap, or a bowl — and every order comes with a side.",
+ disp:'"Barlow Condensed","Arial Narrow",sans-serif',
+ a:"#E0642B",b:"#C9A15A",c:"#8C8276",bg:"#F5EFE4",ink:"#111316",sel:"#111316",selb:"#E0642B",
+ img:"shared/concepts/subhub_hero.jpg",href:"",cta:"",gal:["shared/concepts/subhub_dip.jpg","shared/concepts/subhub_chicken.jpg","shared/concepts/subhub_veggie.jpg","shared/concepts/subhub_club.jpg","shared/concepts/subhub_counter.jpg","shared/concepts/subhub_catering.jpg"],
+ blurb:"Built on warmth, quality, and craftsmanship. Submarine sandwiches on fresh-baked sub buns and sourdough baguettes — real ingredients, bold flavor, stacked to order and available as a sub, wrap, or bowl. Catering boxes made for groups.",
  feats:[["leaf","Fresh Ingredients"],["bread","Baked Daily"],["flame","Bold Flavor"],["heart","Made With Care"]],
  cats:[
   {h:"Signature Subs",n:"On a fresh-baked sub bun or sourdough baguette — also available as a wrap or bowl, with a side",items:[
@@ -319,7 +330,7 @@ const CONCEPTS=[
  name:"Brenen's Cafe",logo:"shared/concepts/brenens_cafe_logo.png",tag:"An elevated café experience since 1994",badge:"Café · Coffee · Since 1994",title:["Elevated Café.","Since 1994."],
  disp:'"Fraunces",serif',
  a:"#8a6d2f",b:"#C9A24B",c:"#555555",bg:"#F4F1EA",ink:"#1A1A1A",sel:"#1A1A1A",selb:"#C9A24B",
- img:"shared/concepts/design_brenens.jpg",href:"https://www.brenensinc.com/",cta:"Visit Brenen's Cafe",gal:["shared/concepts/card_brenens.jpg","shared/concepts/customer-service.jpg","shared/concepts/design_brenens.jpg"],
+ img:"shared/concepts/design_brenens.jpg",href:"https://www.brenensinc.com/",cta:"Visit Brenen's Cafe",gal:["shared/concepts/card_brenens.jpg","shared/concepts/brenens5.jpg","shared/concepts/design_brenens.jpg"],
  blurb:"Since 1994, Brenen's has served café-style sandwiches and salads, fine specialty coffees, baked goods, and fresh fruit smoothies at multiple Ohio State locations.",
  feats:[["coffee","Specialty Coffee"],["bread","Fresh-Baked"],["leaf","Café Fresh"],["star","Since 1994"]],
  cats:[
@@ -361,12 +372,12 @@ const CONCEPTS=[
  byo:["Your Campus, Your Rotation","Chefs Kitchen proves we're not a one-menu operator. Tell us the cuisines your community is asking for — odds are we've already developed, tested, and perfected them."]
 },
 { // 7 OLEA
- name:"Olea",tag:"Flavors of the Mediterranean, made fast",badge:"Mediterranean Bowls · Coming Soon",title:["Mediterranean.","Made Fast."],
- disp:'"Fraunces",serif',
- a:"#5B6B3C",b:"#C9A24B",c:"#A65D3F",bg:"#F5F2E8",ink:"#262418",sel:"#262418",selb:"#C9A24B",
+ name:"Olea",logo:"shared/concepts/olea_logo.png",tag:"Fresh. Elevated. Ingredient-driven.",badge:"Mediterranean Bowls · Coming Soon",title:["Modern Mediterranean.","Rooted in Simplicity."],
+ disp:'"Playfair Display","Fraunces",serif',
+ a:"#2F3B2E",b:"#B28D4D",c:"#C45A3A",bg:"#F5F1EB",ink:"#2A2A2A",sel:"#2F3B2E",selb:"#B28D4D",
  img:"shared/concepts/olea_hero.jpg",href:"contact.html",cta:"Bring Olea to Your Campus First",
  gal:["shared/concepts/olea_bowl1.jpg","shared/concepts/olea_bowl2.jpg","shared/concepts/olea_hero.jpg"],
- blurb:"Flavors from across the Mediterranean and Middle East in a fast, build-your-own bowl format — developed and refined through our Chefs Kitchen rotations. Fresh, vibrant, and naturally rich in vegetarian and vegan options. The menu is developed and ready for its first campus.",
+ blurb:"Olea brings the best of the Mediterranean to your bowl — fresh, vibrant ingredients and time-honored flavors, thoughtfully combined for a meal that’s as nourishing as it is unforgettable. Developed and refined through our Chefs Kitchen rotations, with a full menu ready for its first campus.",
  feats:[["leaf","Fresh & Vibrant"],["star","Chef-Developed"],["clock","Built for Speed"],["heart","Vegan-Friendly"]],
  cats:[
   {h:"Build Your Bowl",n:"Choose a base, add a protein, finish with vegetables & sides",items:[
