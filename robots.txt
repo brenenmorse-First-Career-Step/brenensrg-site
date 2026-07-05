@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brenensrg.com/sitemap.xml

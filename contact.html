@@ -1,5 +1,18 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact — Brenen's Restaurant Group</title><meta name="description" content="Contact Brenens Restaurant Group about campus partnerships, catering, or franchise opportunities.">
+<link rel="canonical" href="https://brenensrg.com/contact.html">
+<link rel="icon" type="image/png" href="shared/brenens_logo_black_transparent.png">
+<link rel="apple-touch-icon" href="shared/brenens_logo_black_transparent.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brenen's Restaurant Group">
+<meta property="og:title" content="Contact — Brenen's Restaurant Group">
+<meta property="og:description" content="Contact Brenen's Restaurant Group about campus or arena partnerships, catering, or franchise opportunities.">
+<meta property="og:url" content="https://brenensrg.com/contact.html">
+<meta property="og:image" content="https://brenensrg.com/shared/hero_home.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Brenen's Restaurant Group">
+<meta name="twitter:description" content="Contact Brenen's Restaurant Group about campus or arena partnerships, catering, or franchise opportunities.">
+<meta name="twitter:image" content="https://brenensrg.com/shared/hero_home.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="shared/brg.css" rel="stylesheet">
@@ -13,40 +26,68 @@
 
 <section class="section"><div class="wrap"><div class="contact-grid">
 <div>
-<h2 style="font-size:1.6rem;margin-bottom:1.2rem;color:var(--ink)">Key Personnel</h2>
-<ul class="personnel">
-<li><b>Scott Morse</b><span>614-506-5584</span></li>
-<li><b>Kyle Rosch</b><span>614-517-7888</span></li>
-<li><b>Don Qualls</b><span>843-227-1534</span></li>
-<li><b>Brenen Morse — Accounting</b><span>865-318-9282</span></li>
-<li><b>Andrew Roberts — Marketing</b><span>865-318-9282</span></li>
-</ul>
+<h2 style="font-size:1.6rem;margin-bottom:1.2rem;color:var(--ink)">Leadership</h2>
+
+<div style="background:var(--cream);border-radius:14px;padding:1.5rem 1.6rem;margin-bottom:1.2rem">
+<h3 style="font-size:1.18rem;color:var(--ink);margin:0">Scott Morse</h3>
+<p style="font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:.25rem 0 .5rem">Founder &amp; Owner</p>
+<p style="margin:0 0 .8rem"><a href="tel:16145065584" style="color:var(--ink);font-weight:600;text-decoration:none">614-506-5584</a></p>
+<p style="color:var(--stone);font-size:.92rem;line-height:1.6;margin:0">A seasoned entrepreneur with more than four decades building and scaling food-service brands. Scott founded Yogurt Oasis in 1984 — a pioneering self-serve frozen yogurt concept that grew into a national franchise with 20 franchisees — followed by six high-volume Brenen's Café locations near Ohio State and Ohio University, and Ambrosia Frozen Yogurt Manufacturing, which supplied proprietary mixes nationwide before its acquisition by Instant Whip. He has launched more than 30 restaurants across multiple concepts and markets, and today guides Brenz Pizza Co. with a focus on sustainable systems, operational excellence, and scalable franchise development.</p>
+</div>
+
+<div style="background:var(--cream);border-radius:14px;padding:1.5rem 1.6rem">
+<h3 style="font-size:1.18rem;color:var(--ink);margin:0">Don Qualls</h3>
+<p style="font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:.25rem 0 .5rem">Vice President, University Dining Development</p>
+<p style="margin:0 0 .8rem"><a href="tel:18432271534" style="color:var(--ink);font-weight:600;text-decoration:none">843-227-1534</a> · <a href="https://www.linkedin.com/in/donald-qualls-ab814b12/" target="_blank" rel="noopener" style="color:var(--accent)">LinkedIn</a></p>
+<p style="color:var(--stone);font-size:.92rem;line-height:1.6;margin:0">Based in Durham, North Carolina, Don has led the growth and execution of Brenen's university dining concepts since 2020 — building relationships with university partners and dining teams, identifying new campus opportunities, supporting concept launches, openings, staffing, and training, and continually sharpening our systems for speed, food quality, and hospitality across every location.</p>
+</div>
+
 <p style="margin-top:1.6rem;color:var(--stone);font-size:.92rem">Columbus, Ohio · <a href="https://brenensrg.com/" style="color:var(--accent)">brenensrg.com</a></p>
 </div>
 <div>
 <h2 style="font-size:1.6rem;margin-bottom:1.2rem;color:var(--ink)">Send Us a Message</h2>
-<form class="cform" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('thanks').style.display='block';">
-<div class="row2"><div><label>First Name</label><input type="text" required></div><div><label>Last Name</label><input type="text" required></div></div>
-<div class="row2"><div><label>Email</label><input type="email" required></div><div><label>Phone</label><input type="tel"></div></div>
-<label>University / Organization</label><input type="text">
-<label>I'm interested in…</label><select><option>A campus location / partnership</option><option>An arena / sporting venue location</option><option>Catering</option><option>Franchise / investment</option><option>General inquiry</option></select>
-<label>Message</label><textarea required placeholder="Tell us about your campus, space, or event…"></textarea>
+<!-- SETUP: create a free form at formspree.io, then replace YOUR_FORM_ID below with your form's ID. Until then the form runs in demo mode. -->
+<form class="cform" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="hidden" name="_subject" value="New inquiry from brenensrg.com">
+<div class="row2"><div><label for="cf-fn">First Name</label><input id="cf-fn" name="first_name" type="text" required autocomplete="given-name"></div><div><label for="cf-ln">Last Name</label><input id="cf-ln" name="last_name" type="text" required autocomplete="family-name"></div></div>
+<div class="row2"><div><label for="cf-em">Email</label><input id="cf-em" name="email" type="email" required autocomplete="email"></div><div><label for="cf-ph">Phone</label><input id="cf-ph" name="phone" type="tel" autocomplete="tel"></div></div>
+<label for="cf-org">University / Organization</label><input id="cf-org" name="organization" type="text" autocomplete="organization">
+<label for="cf-int">I'm interested in…</label><select id="cf-int" name="interest"><option>A campus location / partnership</option><option>An arena / sporting venue location</option><option>Catering</option><option>Franchise / investment</option><option>General inquiry</option></select>
+<label for="cf-msg">Message</label><textarea id="cf-msg" name="message" required placeholder="Tell us about your campus, space, or event…"></textarea>
 <button type="submit" class="btn btn-dark" style="width:100%">Send Message</button>
+<p id="formErr" style="display:none;margin-top:.8rem;font-size:.88rem;color:#a03a2e">Something went wrong sending your message. Please try again, or call one of our team directly.</p>
 </form>
 <div id="thanks" style="display:none;text-align:center;padding:3rem 1rem;background:var(--cream);border-radius:14px">
 <h3 style="font-size:1.5rem;color:var(--ink);margin-bottom:.5rem">Thanks for reaching out!</h3>
 <p style="color:var(--stone)">We'll be in touch soon. For urgent inquiries, call one of our team above.</p></div>
-<p style="margin-top:1rem;font-size:.8rem;color:var(--mute)">This form is a front-end demo. To capture real submissions, connect it to Formspree, Netlify Forms, or your email provider.</p>
 </div>
 </div></div></section>
 <footer class="foot">
 <div class="foot-inner">
-<div class="foot-brand"><div class="fn">Brenen's Restaurant Group</div><div class="ft">Since 1984</div>
+<div class="foot-brand"><div class="fn">Brenen's Restaurant Group</div><div class="ft">Serving Campus Communities Since 1986</div>
 <p>Providing university communities the highest quality restaurants with a local touch — at OSU, Duke, and beyond.</p></div>
 <div class="foot-col"><h4>Explore</h4><a href="expertise.html">Our Expertise</a><a href="design.html">Design</a><a href="concepts.html">Concepts &amp; Cuisine</a><a href="community.html">Community</a><a href="contact.html">Contact</a></div>
-<div class="foot-col"><h4>Concepts</h4><a href="locotos/index.html">Locotos</a><a href="breezy/index.html">Breezy Bev Co</a><a href="ilforno/index.html">Il Forno Kitchen</a><a href="https://www.brenz.com/" target="_blank" rel="noopener">Brenz Pizza Co</a><a href="subhub/index.html">The Sub Hub</a><a href="https://www.brenensinc.com/" target="_blank" rel="noopener">Brenen's Cafe</a><a href="concepts.html">Chefs Kitchen</a>
+<div class="foot-col"><h4>Concepts</h4><a href="concepts.html#locotos">Locotos</a><a href="concepts.html#breezy">Breezy Bev Co</a><a href="concepts.html#ilforno">Il Forno Kitchen</a><a href="https://www.brenz.com/" target="_blank" rel="noopener">Brenz Pizza Co</a><a href="concepts.html#subhub">The Sub Hub</a><a href="https://www.brenensinc.com/" target="_blank" rel="noopener">Brenen's Cafe</a><a href="concepts.html">Chefs Kitchen</a>
     </div>
 </div>
-<div class="foot-base"><span>© 2026 Brenen's Restaurant Group. All rights reserved.</span><span>Columbus, Ohio · brenensrg.com</span></div>
+<div class="foot-base"><span>© 2026 Brenen's Restaurant Group. All rights reserved.</span><span>Columbus, Ohio · brenensrg.com · <a href="privacy.html" style="color:inherit">Privacy</a></span></div>
 </footer>
-<script>const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');if(t){t.addEventListener('click',()=>l.classList.toggle('open'));l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));}</script></body></html>
+<script>const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');if(t){t.addEventListener('click',()=>l.classList.toggle('open'));l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));}
+
+const form=document.getElementById('contactForm'),thanks=document.getElementById('thanks'),errMsg=document.getElementById('formErr');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();errMsg.style.display='none';
+  const btn=form.querySelector('button[type="submit"]');
+  // Demo mode until a real Formspree ID is set
+  if(form.action.includes('YOUR_FORM_ID')){
+    console.warn('Contact form is in demo mode — replace YOUR_FORM_ID in contact.html with your Formspree form ID.');
+    form.style.display='none';thanks.style.display='block';return;
+  }
+  btn.disabled=true;btn.textContent='Sending…';
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(res.ok){form.style.display='none';thanks.style.display='block';}
+    else{errMsg.style.display='block';}
+  }catch(_){errMsg.style.display='block';}
+  btn.disabled=false;btn.textContent='Send Message';
+});</script></body></html>
