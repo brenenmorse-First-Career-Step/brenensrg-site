@@ -146,7 +146,7 @@
     <button class="cx-tab" role="tab" aria-selected="false" data-i="4"><span class="t-name">The Sub Hub</span><span class="t-type">Submarines</span></button>
     <button class="cx-tab" role="tab" aria-selected="false" data-i="5"><span class="t-name">Brenen's Cafe</span><span class="t-type">Since 1994</span></button>
     <button class="cx-tab" role="tab" aria-selected="false" data-i="6"><span class="t-name">Chefs Kitchen</span><span class="t-type">Rotating Menus</span></button>
-    <button class="cx-tab" role="tab" aria-selected="false" data-i="7"><span class="t-name">Olea</span><span class="t-type">Coming Soon</span></button>
+    <button class="cx-tab" role="tab" aria-selected="false" data-i="7"><span class="t-name">Olea</span><span class="t-type">Mediterranean Bowls</span></button>
   </div>
   <div class="cx-show" id="cxShow" role="tabpanel"><!-- injected --></div>
 </section>
@@ -160,7 +160,7 @@
 <div class="foot-brand"><div class="fn">Brenen's Restaurant Group</div><div class="ft">Serving Campus Communities Since 1986</div>
 <p>Providing university communities the highest quality restaurants with a local touch — at OSU, Duke, and beyond.</p></div>
 <div class="foot-col"><h4>Explore</h4><a href="expertise.html">Our Expertise</a><a href="design.html">Design</a><a href="concepts.html">Concepts &amp; Cuisine</a><a href="community.html">Community</a><a href="contact.html">Contact</a></div>
-<div class="foot-col"><h4>Concepts</h4><a href="concepts.html#locotos">Locotos</a><a href="concepts.html#breezy">Breezy Bev Co</a><a href="concepts.html#pastello">Pastello Italian Kitchen</a><a href="https://www.brenz.com/" target="_blank" rel="noopener">Brenz Pizza Co</a><a href="concepts.html#subhub">The Sub Hub</a><a href="https://www.brenensinc.com/" target="_blank" rel="noopener">Brenen's Cafe</a><a href="concepts.html">Chefs Kitchen</a>
+<div class="foot-col"><h4>Concepts</h4><a href="concepts.html#locotos">Locotos</a><a href="concepts.html#breezy">Breezy Bev Co</a><a href="concepts.html#pastello">Pastello Italian Kitchen</a><a href="https://www.brenz.com/" target="_blank" rel="noopener">Brenz Pizza Co</a><a href="concepts.html#subhub">The Sub Hub</a><a href="https://www.brenensinc.com/" target="_blank" rel="noopener">Brenen's Cafe</a><a href="concepts.html">Chefs Kitchen</a><a href="concepts.html#olea">Olea</a>
     </div>
 </div>
 <div class="foot-base"><span>© 2026 Brenen's Restaurant Group. All rights reserved.</span><span>Columbus, Ohio · brenensrg.com · <a href="privacy.html" style="color:inherit">Privacy</a></span></div>
@@ -211,38 +211,37 @@ const CONCEPTS=[
  blurb:"A vibrant Latin American grill rooted in the Andes. Bold, fresh bowls, plates, and tacos with handcrafted flavors and premium ingredients — from hand-cut pico de gallo to slow-roasted carnitas and barbacoa made in house. Formerly Sazón at Duke’s Broadhead Center.",
  feats:[["leaf","Fresh"],["flame","Grilled"],["chili","Bold Flavor"],["mortar","Handmade"]],
  cats:[
-  {h:"Build-Your-Own Bowls",n:"Rice or greens base, your protein, your toppings",items:[
-   ["Barbacoa Bowl","Slow-roasted beef, cilantro-lime rice, black beans, pico",""],
-   ["Pollo Verde Bowl","Salsa-verde chicken, plantains, corn, crema",""],
-   ["Carnitas Bowl","Citrus pork, black beans, pickled onion, queso fresco",""],
-   ["Veggie Andes Bowl","Roasted vegetables, choclo, avocado, chimichurri",""]]},
-  {h:"Tacos & Plates",n:"Served on hand-pressed tortillas",items:[
-   ["Carnitas Tacos (3)","Citrus pork, pickled onion, queso fresco",""],
-   ["Barbacoa Tacos (3)","Slow-roasted beef, cilantro, onion, lime",""],
-   ["Grilled Plantain Plate","Sweet plantains, black beans, crema",""],
-   ["Chimichurri Steak Plate","Grilled steak, rice, salsa criolla",""]]}],
- byo:["Your Coast, Your Bowl","Pick a base, a protein, and pile on hand-cut pico, black beans, choclo, plantains, avocado, and house salsas — carnitas, barbacoa, pollo verde, or roasted veg."]
+  {h:"Build Your Own",n:"Latin bowl, quesadilla, burrito, or 2 tacos — pick your protein",items:[
+   ["Slow-Roasted Chicken","Pulled chicken seasoned with our house Chipotle Adobo sauce",""],
+   ["Barbacoa","Seared beef in herbs, roasted onion, garlic & chiles — slow-roasted for 12 hours",""],
+   ["Carnitas","Pork shoulder rubbed with earthy herbs & garlic, apple-infused, slow-roasted for 12 hours",""],
+   ["Blackened Shrimp","Seasoned shrimp cooked perfectly on our grill",""]]},
+  {h:"Toppings & Extras",n:"Load it up, then grab a side",items:[
+   ["Fresh Toppings","Arepa, cilantro white rice, pinto & black beans, cotija, fajita peppers & onions, pico de gallo & more",""],
+   ["Queso & Guacamole","Add to any build",""],
+   ["Chips & Salsa · Guac · Queso","Fresh chips with house-made dips",""],
+   ["$5 Deal","1 street taco + chips & salsa or plantains",""]]}],
+ byo:["Build Your Own","Choose a Latin bowl, quesadilla, burrito, or two tacos. Pick a protein — slow-roasted chicken, barbacoa, carnitas, blackened shrimp, chili lime mahi mahi, grilled portobello, or plant-based Nadura chorizo — then pile on toppings from arepa to roasted corn salsa, with house horchata on the side."]
 },
 { // 1 PASTELLO (formerly Il Forno)
  name:"Pastello Italian Kitchen",logo:"shared/concepts/pastello_logo.png",tag:"Your pasta, tossed to order",badge:"Italian Kitchen · Custom Pasta Bowls",title:["Your Pasta.","Your Bowl."],
  disp:'"Barlow Condensed","Arial Narrow",sans-serif',
  a:"#CE2A28",b:"#2E7D46",c:"#141414",bg:"#F7F5F1",ink:"#141414",sel:"#141414",selb:"#CE2A28",
  img:"shared/concepts/pastello_penne.jpg",href:"",cta:"",gal:["shared/concepts/pastello_spaghetti.jpg","shared/concepts/pastello_catering.jpg","shared/concepts/pastello_pesto.jpg"],
- blurb:"House-made is the standard at Pastello. Custom pasta bowls tossed to order — fresh pastas, house-made sauces, and premium proteins in endless combinations — built for the speed of a campus lunch rush, serving Duke since 2016.",
- feats:[["wheat","Fresh Pasta"],["flame","Tossed to Order"],["leaf","House-Made Sauces"],["heart","Made With Care"]],
+ blurb:"House-made is the standard at Pastello. Custom pasta bowls tossed to order — house-made sauces and premium proteins in endless combinations — built for the speed of a campus lunch rush, serving Duke since 2016.",
+ feats:[["wheat","Chef-Inspired"],["flame","Tossed to Order"],["leaf","House-Made Sauces"],["heart","Made With Care"]],
  cats:[
-  {h:"Build Your Pasta Bowl",n:"Pick a pasta, pick a sauce, add a protein — tossed to order",items:[
-   ["Fresh Pastas","Penne, spaghetti, fettuccine, or casarecce — gluten-free available",""],
-   ["House-Made Sauces","Pomodoro, alfredo, basil pesto cream, rosa, or spicy arrabbiata",""],
-   ["Proteins","Grilled chicken, house meatballs, Italian sausage, or roasted vegetables",""],
-   ["Finishes","Shaved parmesan, fresh basil, chili flake, toasted garlic bread",""]]},
-  {h:"Signature Bowls & Salads",n:"House favorites, ready at line speed",items:[
-   ["Pesto Chicken Penne","Grilled chicken, basil pesto cream, grape tomatoes",""],
-   ["Spaghetti & House Meatballs","San Marzano pomodoro, hand-rolled meatballs, parmesan",""],
-   ["Fettuccine Alfredo","Parmesan cream, cracked pepper",""],
-   ["Caprese Pesto Bowl","Fresh mozzarella, roasted tomatoes, basil pesto",""],
-   ["San Pellegrino Salad","Arugula, shaved parmesan, lemon vinaigrette",""]]}],
- byo:["Custom Bowls, Built for the Rush","Every bowl is tossed to order — your pasta, your sauce, your protein — and still hits campus ticket times. Fresh never has to mean slow."]
+  {h:"Chef-Inspired Pastas",n:"Served with a garlic breadstick",items:[
+   ["Chicken Alfredo","Seared chicken, parmesan alfredo sauce, fettuccine, spinach, mushrooms, romano",""],
+   ["Braised Italian Beef","Braised beef ragu, rigatoni, touch of parmesan alfredo, roasted tomatoes, romano",""],
+   ["Blackened Shrimp Scampi","Blackened shrimp, lemon garlic olive oil, spaghetti, roasted red peppers, fresh basil, romano",""],
+   ["Meatballs & Burrata","3 meatballs, burrata, red sauce, olive oil, parmesan, drizzle of basil pesto, fresh basil",""]]},
+  {h:"Your Pasta, Your Way",n:"Choose your favorite sauce and pasta + one protein + three veggies — served with a garlic breadstick",items:[
+   ["Pastas","Fettuccine, spaghetti, or rigatoni",""],
+   ["Sauces","Pomodoro, alfredo, arrabbiata, pesto basil, or parma rosa",""],
+   ["Proteins","Seared chicken, Italian sausage, homemade meatballs, braised beef, baked salmon, blackened shrimp, or Nadura plant-based",""],
+   ["Veggies","Sweet peppers, sautéed onion, roasted tomatoes, baby spinach, roasted red peppers, marinated mushrooms, green onion",""]]}],
+ byo:["Your Pasta, Your Way","Every bowl is tossed to order — your pasta, your sauce, your protein, your veggies — and still hits campus ticket times. Chef-inspired favorites like Parma Rosa, Garden Pesto, Buffalo Chicken, and Spicy Il Forno round out the board."]
 },
 { // 2 BRENZ
  name:"Brenz Pizza Co",logo:"shared/concepts/brenz_logo.png",tag:"Premium. Pizza. Delivered.",badge:"Handcrafted Pizza",title:["24-Hour Dough.","Bold Pizza."],
@@ -255,19 +254,13 @@ const CONCEPTS=[
   {h:"Award-Winning Specialty Pizzas",n:"8\" personal to 16\" large, on 24-hour aged dough",items:[
    ["Old World","Garlic butter base, fresh mozzarella, pepperoni, sliced meatballs, banana peppers, dollops of red sauce",""],
    ["Heritage Honey","Pepperoni, sliced sausage, ricotta, shaved parmesan, basil, signature hot-honey drizzle",""],
-   ["The Heater","Ranch, chicken, bacon, onions, hot buffalo, cheddar, jalapeños",""],
-   ["Mediterranean","Olive oil, kalamata olives, bruschetta tomatoes, roasted red peppers, Greek sauce, feta & basil",""],
-   ["Rustic","Pepperoni, crumbled sausage, caramelized onions, roasted red peppers, basil",""],
    ["Bianca Rossa","Olive oil, crumbled sausage, fresh mozzarella, dollops of red sauce, bruschetta tomatoes",""],
-   ["Forester","Spinach, bacon, sliced sausage, caramelized onions, ricotta, mushrooms, hot honey drizzle",""],
-   ["ATM — All The Meat","Pepperoni, ham, crumbled sausage, bacon",""]]},
+   ["Mediterranean","Olive oil, kalamata olives, bruschetta tomatoes, roasted red peppers, Greek sauce, feta & basil",""]]},
   {h:"Starters, Salads & Sweets",n:"House-made dressings from our own recipes",items:[
    ["Jumbo Wings","Oven-baked, tossed in your choice of eight house sauces",""],
    ["Cheesy Breadsticks","Baked fresh with garlic butter, mozzarella, provolone & parmesan",""],
    ["Greek Salad","Romaine, kalamata olives, banana peppers, feta, Greek dressing",""],
-   ["Spicy Citrus Salad","Romaine, mandarin oranges, almonds, feta, spicy citrus dressing",""],
-   ["Cinnazos","Fresh-baked dough tossed in cinnamon sugar, served with icing",""],
-   ["Fresh-Baked Cookies","Chocolate chunk & limited specials",""]]}],
+   ["Cinnazos","Fresh-baked dough tossed in cinnamon sugar, served with icing",""]]}],
  byo:["Pizza Your Way","Pick your size (8\" personal to 16\" large), your base — red sauce, garlic butter, olive oil, or ranch — and build from 25+ premium toppings, with after-bake finishes like hot honey drizzle, feta, and fresh basil. Gluten-free friendly crusts available in 10\"."]
 },
 { // 3 BREEZY
@@ -287,10 +280,7 @@ const CONCEPTS=[
    ["Ocean Mist","Lemonade, blueberry, coconut, butterfly pea float",""],
    ["Island Breeze","Green tea, mango, peach, coconut, basil",""],
    ["Pink Sand","Lemonade, strawberry purée, fresh strawberries, basil",""],
-   ["Sailors Sky","Lemonade, watermelon cooler, mint, butterfly pea",""],
-   ["Ginger Shore","Green tea, lemonade, ginger, mint, lemon",""],
-   ["Green Coast Matcha","Matcha, lemonade, mango, mint, lemon",""],
-   ["Coastal Chill","Lemonade, ginger, watermelon cooler, strawberry",""]]},
+   ["Green Coast Matcha","Matcha, lemonade, mango, mint, lemon",""]]},
   {h:"Tide Tea Lattes",n:"Chai + Matcha",items:[
    ["Matcha Drift","Matcha, vanilla, mint, strawberry swirl",""],
    ["Blueberry Matcha Rise","Matcha, blueberry, mint, fresh blueberries",""],
@@ -307,28 +297,20 @@ const CONCEPTS=[
  disp:'"Barlow Condensed","Arial Narrow",sans-serif',
  a:"#E0642B",b:"#C9A15A",c:"#8C8276",bg:"#F5EFE4",ink:"#111316",sel:"#111316",selb:"#E0642B",
  img:"shared/concepts/subhub_hero.jpg",href:"",cta:"",gal:["shared/concepts/subhub_chicken.jpg","shared/concepts/subhub_club.jpg","shared/concepts/subhub_catering.jpg"],
- blurb:"Built on warmth, quality, and craftsmanship. Submarine sandwiches on fresh-baked sub buns and sourdough baguettes — real ingredients, bold flavor, stacked to order and available as a sub, wrap, or bowl. Catering boxes made for groups.",
+ blurb:"Built on warmth, quality, and craftsmanship. Submarine sandwiches on fresh-baked sub buns and baguettes — real ingredients, bold flavor, stacked to order and available as a sub, wrap, or bowl. Catering boxes made for groups.",
  feats:[["leaf","Fresh Ingredients"],["bread","Baked Daily"],["flame","Bold Flavor"],["heart","Made With Care"]],
  cats:[
-  {h:"Signature Subs",n:"On a fresh-baked sub bun or sourdough baguette — also available as a wrap or bowl, with a side",items:[
+  {h:"Signature Subs",n:"On a fresh-baked sub bun or baguette — also available as a wrap or bowl, with a side",items:[
    ["The Italian","Ham, pepperoni, salami, capicola, provolone",""],
    ["Club Royal","Roast beef, turkey, bacon, provolone, mayo",""],
    ["Roast Beef Dip","Roast beef, melted provolone, sautéed onions & peppers, side of au jus",""],
-   ["Southwest Chicken","Chicken, pepper jack, hot pepper relish, chipotle mayo",""],
-   ["Jammin' Turkey","Turkey, hot pepper jam, provolone, cream cheese, bell peppers",""],
-   ["Spicy East Coast","Extra salami, extra capicola, provolone",""],
-   ["Turkey & Provolone","Extra turkey, extra provolone",""],
-   ["The Club","Turkey, ham, bacon, provolone, mayo",""],
-   ["Chicken Salad","Chicken salad, romaine, provolone",""],
-   ["Classic Veggie","Pepper jack, provolone, bell peppers",""]]},
+   ["Southwest Chicken","Chicken, pepper jack, hot pepper relish, chipotle mayo",""]]},
   {h:"The Works & Sides",n:"Dressed your way, with a side",items:[
    ["The Works","Lettuce, tomatoes, onions, banana peppers, oil & vinegar, mayo, oregano",""],
    ["Kettle Chips","Sea salt or jalapeño",""],
-   ["Italian Pasta Salad","Rotini, vegetables, Italian dressing",""],
-   ["Fresh Fruit Cup","Seasonal cut fruit",""],
    ["Fresh-Squeezed Lemonade","Squeezed daily",""],
    ["Fresh-Baked Cookie","Baked fresh daily",""]]}],
- byo:["Build Your Perfect Sub","Pick your bread — fresh-baked sub bun or sourdough baguette — then stack premium meats, cheeses, peppers, and house condiments. Any sub can be a wrap or a bowl."]
+ byo:["Build Your Perfect Sub","Pick your bread — fresh-baked sub bun or baguette — then stack premium meats, cheeses, peppers, and house condiments. Any sub can be a wrap or a bowl."]
 },
 { // 5 BRENEN'S CAFE
  name:"Brenen's Cafe",logo:"shared/concepts/brenens_cafe_logo.png",tag:"An elevated café experience since 1994",badge:"Café · Coffee · Since 1994",title:["Elevated Café.","Since 1994."],
@@ -363,10 +345,6 @@ const CONCEPTS=[
    ["A Taste of the Hawaiian Islands","Huli Huli chicken, kalua pork, mahi mahi, build-your-own island plates",""],
    ["A Taste of Miami","Mojo chicken, Cubano sandwiches, ropa vieja, key lime pie",""],
    ["A Taste of New Orleans","Creamy Cajun chicken, lowcountry boil, chicory cold brew, beignets",""],
-   ["Peri-Peri — A Portuguese Favorite","Peri-peri grilled chicken, harissa braised beef, build-your-own bowls",""],
-   ["A Taste of San Francisco","Mission burritos, Shrimp Louie, clam chowder with sourdough",""],
-   ["A Taste of South Carolina","Shrimp perloo, lowcountry boil, country fried steak, peach cobbler",""],
-   ["A Taste of Philly","Cheesesteaks, Italian beef au jus, soft pretzels",""],
    ["A Taste of the Caribbean","Jamaican jerk chicken, pernil pork, shrimp creole, house-made flan",""]]},
   {h:"Why It Matters",n:"Rotation as research & development",items:[
    ["Dozens of menus launched","Every cuisine is developed, priced, and proven under real campus volume",""],
@@ -376,7 +354,7 @@ const CONCEPTS=[
  byo:["Your Campus, Your Rotation","Chefs Kitchen proves we're not a one-menu operator. Tell us the cuisines your community is asking for — odds are we've already developed, tested, and perfected them."]
 },
 { // 7 OLEA
- name:"Olea",logo:"shared/concepts/olea_logo.png",tag:"Fresh. Elevated. Ingredient-driven.",badge:"Mediterranean Bowls · Coming Soon",title:["Modern Mediterranean.","Rooted in Simplicity."],
+ name:"Olea",logo:"shared/concepts/olea_logo.png",tag:"Fresh. Elevated. Ingredient-driven.",badge:"Mediterranean Bowls",title:["Modern Mediterranean.","Rooted in Simplicity."],
  disp:'"Playfair Display","Fraunces",serif',
  a:"#2F3B2E",b:"#B28D4D",c:"#C45A3A",bg:"#F5F1EB",ink:"#2A2A2A",sel:"#2F3B2E",selb:"#B28D4D",
  img:"shared/concepts/olea_hero.jpg",href:"contact.html",cta:"Bring Olea to Your Campus First",
@@ -386,22 +364,14 @@ const CONCEPTS=[
  cats:[
   {h:"Build Your Bowl",n:"Choose a base, add a protein, finish with vegetables & sides",items:[
    ["Moroccan Rice","Basmati steeped in mint, tossed with garlic, cumin, coriander & raisins",""],
-   ["Syrian Mint Cabbage & Kale Slaw","Shredded cabbage, kale & mint with Aleppo pepper, garlic & lemon",""],
-   ["Warm Flatbread","Olive-oil brushed — gluten-free available",""],
    ["Peri-Peri Chicken","Slow-roasted, marinated in lemon, garlic & Portuguese peri-peri",""],
    ["Persian Meshwia Steak","Seared steak rubbed with coriander, cumin, paprika, cayenne & thyme",""],
-   ["Greek Mint & Cilantro Lamb","Ground lamb & beef with onion, cilantro, ginger & spices",""],
-   ["Roasted Eggplant & Zucchini","Marinated in sumac, garlic, cinnamon & honey, oven-roasted",""],
-   ["Tabbouleh","Fresh parsley & mint, quinoa, tomato, red onion, lemon & olive oil",""],
-   ["Lentils","Red lentils, bell pepper & cucumber in a lemon-mint dressing",""],
-   ["Sweet Potato Fries","Wedge-sliced, spiced & oven-roasted",""]]},
+   ["Roasted Eggplant & Zucchini","Marinated in sumac, garlic, cinnamon & honey, oven-roasted",""]]},
   {h:"House Spreads & Sauces",n:"Signature sauces, made in house",items:[
    ["Hummus","Classic Mediterranean chickpea spread",""],
    ["Shu'ug","Spicy Israeli condiment of peppers, garlic, spices & lemon",""],
    ["Romesco","Roasted red pepper sauce with basil & garlic",""],
-   ["Chickpea Pesto","Signature pesto of chickpeas, basil, olive oil, lemon & garlic",""],
-   ["Lemon Garlic Aioli","Creamy, spicy garlic sauce with fresh-squeezed lemon",""],
-   ["Kalamata Sauce","Kalamata olives, garlic, lemon & oil",""]]}],
+   ["Chickpea Pesto","Signature pesto of chickpeas, basil, olive oil, lemon & garlic",""]]}],
  byo:["Lunch Through Dinner","Build-your-own bowls, house spreads, and warm flatbread from one compact, fast-moving line — flavors from across the Mediterranean, engineered for campus speed."]
 }
 ];
@@ -438,7 +408,7 @@ function render(i){
    ${d.gal?`<div class="cs-gallery">${d.gal.map(g=>`<img src="${g}" alt="${d.name}" loading="lazy">`).join('')}</div>`:''}
    ${d.menus?`<div class="cs-menus"><h4 style="color:${d.a}">Rotation Menu Archive — tap to view</h4><div class="grid">${d.menus.map(m=>`<a href="${m[0]}" target="_blank" rel="noopener"><img src="${m[0]}" alt="${m[1]} rotation menu" loading="lazy"><div class="lbl" style="color:${d.c}">${m[1]}</div></a>`).join('')}</div></div>`:''}
    <div class="cs-menu">
-     <div class="cs-menu-head"><div class="k">The Menu</div>${d.logo?`<img class="menu-logo" src="${d.logo}" alt="${d.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><h3 style="display:none">${d.name}</h3>`:`<h3>${d.name}</h3>`}</div>
+     <div class="cs-menu-head"><div class="k">Featured Menu Items</div>${d.logo?`<img class="menu-logo" src="${d.logo}" alt="${d.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><h3 style="display:none">${d.name}</h3>`:`<h3>${d.name}</h3>`}</div>
      <div class="cs-cats">${cats}</div>
    </div>
    <div class="cs-byo"><div class="bt">${d.byo[0]}</div><div class="bd">${d.byo[1]}</div></div>
