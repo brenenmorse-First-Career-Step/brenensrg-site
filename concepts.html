@@ -170,27 +170,27 @@
 
 // SVG icon set (stroke uses currentColor via CSS)
 const IC={
-  leaf:'<path d="M19 4c.4 7-2 12.5-8 14-3 .8-5.5-1.2-5-4C7 9 12 5.5 19 4z"/><path d="M15.5 8C11.5 10.5 8 14.5 5.5 19.5"/>',
-  flame:'<path d="M12 2.5C9.5 6.5 5.5 9.6 5.5 14a6.5 6.5 0 0013 0c0-4.4-4-7.5-6.5-11.5z"/><path d="M9.6 15.8c0-2.4 1.9-3.3 2.4-5.3.5 2 2.4 2.9 2.4 5.3a2.4 2.4 0 01-4.8 0z"/>',
-  chili:'<path d="M19.5 6.5c1 4.5-1.5 9.7-6 12.2-3.6 2-8 1.4-10-1 5 .6 9-2 10.5-6.5.8-2.2 2.5-4.1 5.5-4.7z"/><path d="M19.5 6.5c-.2-2 .6-3.4 2-4"/><path d="M11 13.5c-1 2-2.6 3.6-4.6 4.6"/>',
-  trophy:'<path d="M7 3.5h10V9a5 5 0 01-10 0z"/><path d="M7 4.5H3.5V6A3.5 3.5 0 007 9.5M17 4.5h3.5V6A3.5 3.5 0 0117 9.5"/><path d="M12 14v2.5"/><path d="M8.5 20.5v-2a1.5 1.5 0 011.5-1.5h4a1.5 1.5 0 011.5 1.5v2z"/><path d="M6.5 20.5h11"/>',
-  wing:'<circle cx="14.5" cy="9" r="6"/><path d="M10.4 13.4L7 17"/><circle cx="5.5" cy="17.7" r="1.9"/><circle cx="8.4" cy="20.5" r="1.9"/>',
-  mortar:'<path d="M4 10h16M6 10c0 5 3 8 6 8s6-3 6-8M12 3v4"/>',
-  bowl:'<path d="M4.5 11.5h15a7.5 7.5 0 01-15 0z"/><path d="M9.5 18.7V20.5h5v-1.8"/><path d="M12.3 8.2c-.7-.9-.7-1.9 0-2.8.7-.9.7-1.9 0-2.8"/>',
-  globe:'<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17"/><ellipse cx="12" cy="12" rx="4.2" ry="8.5"/><path d="M5.2 7.2c1.9 1.3 4.2 2 6.8 2s4.9-.7 6.8-2M5.2 16.8c1.9-1.3 4.2-2 6.8-2s4.9.7 6.8 2"/>',
-  users:'<circle cx="8" cy="9" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5"/><path d="M15 7a3 3 0 010 6M22 20c0-2-1-4-4-4.5"/>',
-  wheat:'<path d="M12 3v18M12 7c-2-2-5-1-5-1s0 3 2 4M12 7c2-2 5-1 5-1s0 3-2 4M12 13c-2-2-5-1-5-1s0 3 2 4M12 13c2-2 5-1 5-1s0 3-2 4"/>',
-  clock:'<circle cx="12" cy="12" r="8.5"/><path d="M12 6.5V12l3.5 2.5"/>',
-  heart:'<path d="M12 20.5C7 16.5 3.5 13 3.5 9.2 3.5 6.4 5.6 4.5 8.1 4.5c1.6 0 3 .8 3.9 2.1.9-1.3 2.3-2.1 3.9-2.1 2.5 0 4.6 1.9 4.6 4.7 0 3.8-3.5 7.3-8.5 11.3z"/>',
-  cup:'<path d="M5 8h11v5a5 5 0 01-10 0zM16 9h2a2 2 0 010 4h-2M5 20h11"/>',
-  wave:'<path d="M3 9.5c2.2-3 4.3-3 6.5 0s4.3 3 6.5 0c1.4-1.9 2.8-2.5 5-1.7M3 15.5c2.2-3 4.3-3 6.5 0s4.3 3 6.5 0c1.4-1.9 2.8-2.5 5-1.7"/>',
-  snow:'<path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9M8 4l4 3 4-3M8 20l4-3 4 3"/>',
-  bread:'<rect x="3" y="9.5" width="18" height="9" rx="4.5"/><path d="M8.6 9.5c1.2.9 1.8 2.2 1.8 3.8M13.3 9.5c1.2.9 1.8 2.2 1.8 3.8M17.7 9.8c1 .9 1.5 2 1.5 3.3"/>',
-  star:'<path d="M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z"/>',
-  bean:'<path d="M8 4c6 0 10 5 8 11-1 4-6 6-9 4C3 17 2 10 5 6c1-1 2-2 3-2z"/>',
-  coffee:'<path d="M5 9.5h12v3.5a6 6 0 01-12 0z"/><path d="M17 10.5h1.3a2.5 2.5 0 010 5h-1.8"/><path d="M8.3 3.5L9.8 6M12.3 4l1.1 1.8"/>'
+  coffee:{v:'0 0 256 256',d:'<g stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M84 104h74v34c0 20-16 36-36 36h-2c-20 0-36-16-36-36v-34z"/><path d="M158 114h18c12 0 22 10 22 22s-10 22-22 22h-18"/><path d="M103 88l8 8"/><path d="M123 80l6 10"/></g>'},
+  flame:{v:'0 0 256 256',d:'<g stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M128 38c18 32 44 50 44 90 0 32-20 54-44 62-24-8-44-30-44-62 0-24 10-42 26-60 13-14 19-24 18-30z"/><path d="M126 94c10 16 24 26 24 46 0 16-10 28-24 34-14-6-24-18-24-34 0-14 7-25 17-36 4-4 7-7 7-10z"/></g>'},
+  globe:{v:'0 0 256 256',d:'<g stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="128" r="70"/><path d="M128 58c24 15 36 41 36 70s-12 55-36 70"/><path d="M128 58c-24 15-36 41-36 70s12 55 36 70"/><path d="M58 128h140"/><path d="M76 94c16 10 34 14 52 14s36-4 52-14"/><path d="M76 162c16-10 34-14 52-14s36 4 52 14"/><path d="M128 58v140"/></g>'},
+  heart:{v:'0 0 256 256',d:'<g stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M128 198c-29-31-68-52-68-92 0-22 17-36 38-36 14 0 24 6 30 16 6-10 16-16 30-16 21 0 38 14 38 36 0 40-39 61-68 92z"/></g>'},
+  leaf:{v:'0 0 256 256',d:'<g stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M74 170c0-60 44-104 108-108-4 64-48 108-108 108z"/><path d="M78 186c32-52 60-83 93-108"/></g>'},
+  snow:{v:'0 0 256 256',d:'<g stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M128 56v144"/><path d="M66 92l124 72"/><path d="M190 92L66 164"/><path d="M128 56l-12 12"/><path d="M128 56l12 12"/><path d="M128 200l-12-12"/><path d="M128 200l12-12"/><path d="M66 92l16 2"/><path d="M66 92l-3 16"/><path d="M190 164l-16-2"/><path d="M190 164l3-16"/><path d="M190 92l-16 2"/><path d="M190 92l3 16"/><path d="M66 164l16-2"/><path d="M66 164l-3-16"/></g>'},
+  star:{v:'0 0 256 256',d:'<g stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M128 50l19 38 42 6-30 29 7 41-38-20-38 20 7-41-30-29 42-6 19-38z"/></g>'},
+  wave:{v:'0 0 256 256',d:'<g stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M58 112c14 0 14-10 28-10s14 10 28 10 14-10 28-10 14 10 28 10 14-10 28-10"/><path d="M58 144c14 0 14-10 28-10s14 10 28 10 14-10 28-10 14 10 28 10 14-10 28-10"/></g>'},
+  trophy:{v:'0 0 256 256',d:'<g stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M76 78h104v12c0 34-22 61-52 68-30-7-52-34-52-68V78z"/><path d="M76 90H56c0 28 18 46 42 50"/><path d="M180 90h20c0 28-18 46-42 50"/><path d="M128 110l8 16 18 3-13 12 3 18-16-8-16 8 3-18-13-12 18-3 8-16z"/><path d="M112 158v20c0 10-8 18-18 18h68c-10 0-18-8-18-18v-20"/><rect x="90" y="196" width="76" height="18" rx="2"/><rect x="82" y="214" width="92" height="18" rx="3"/></g>'},
+  bowl:{v:'0 0 256 256',d:'<g stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M82 110h92c0 38-18 58-46 58s-46-20-46-58z"/><rect x="112" y="168" width="32" height="10" rx="2"/><path d="M128 92c0-8 6-12 6-20 0-4-2-8-4-12"/></g>'},
+  bread:{v:'0 0 256 256',d:'<g stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M56 166v-14c0-18 14-32 32-32 8 0 16 3 22 8 6-5 14-8 22-8 10 0 18 4 24 10 7-6 15-10 25-10 22 0 39 17 39 39v7c0 15-12 27-27 27H83c-15 0-27-12-27-27z"/><path d="M92 128c10 8 15 18 15 31"/><path d="M128 120c10 8 15 18 15 31"/><path d="M164 122c9 7 13 16 13 29"/></g>'},
+  wing:{v:'0 0 256 256',d:'<g stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M54 154c8-10 22-12 34-7 18-17 36-25 64-30 28-6 46 4 53 18 7 15 5 34-10 47-15 13-41 19-67 19-19 0-40-4-57-13-10 4-23 1-31-9-9-10-7-19 0-25 7-6 10-10 14-18z"/><path d="M97 177c18 7 43 10 63 6"/><path d="M144 127c10 6 19 18 22 30"/><path d="M82 146c8 6 14 14 18 22"/><path d="M148 108c6 0 11 1 16 2" stroke-dasharray="2 14"/></g>'},
+  chili:{v:'0 0 256 256',d:'<g stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M166 78c-14 4-19 13-22 28-5 29-25 57-52 78-17 14-33 22-41 26 10 4 32 7 58 0 37-10 64-34 79-72 8-21 4-39-7-51-4-4-9-8-15-9z"/><path d="M155 79c5-10 11-17 22-20"/><path d="M122 122c-14 25-28 45-52 62"/></g>'},
+  clock:{v:'0 0 256 256',d:'<g stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="128" r="72"/><path d="M128 86v42"/><path d="M128 128l34 24"/><circle cx="128" cy="128" r="3"/></g>'},
+  wheat:{v:'0 0 24 24',d:'<path d="M12 3v18M12 7c-2-2-5-1-5-1s0 3 2 4M12 7c2-2 5-1 5-1s0 3-2 4M12 13c-2-2-5-1-5-1s0 3 2 4M12 13c2-2 5-1 5-1s0 3-2 4"/>'},
+  mortar:{v:'0 0 24 24',d:'<path d="M4 10h16M6 10c0 5 3 8 6 8s6-3 6-8M12 3v4"/>'},
+  users:{v:'0 0 24 24',d:'<circle cx="8" cy="9" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5"/><path d="M15 7a3 3 0 010 6M22 20c0-2-1-4-4-4.5"/>'},
+  cup:{v:'0 0 24 24',d:'<path d="M5 8h11v5a5 5 0 01-10 0zM16 9h2a2 2 0 010 4h-2M5 20h11"/>'},
+  bean:{v:'0 0 24 24',d:'<path d="M8 4c6 0 10 5 8 11-1 4-6 6-9 4C3 17 2 10 5 6c1-1 2-2 3-2z"/>'}
 };
-const svg=n=>`<svg viewBox="0 0 24 24">${IC[n]||''}</svg>`;
+const svg=n=>{const i=IC[n];return i?`<svg viewBox="${i.v}">${i.d}</svg>`:'<svg viewBox="0 0 24 24"></svg>';};
 
 /* ==========================================================================
    HOW TO EDIT THE CONCEPTS (no coding needed)
